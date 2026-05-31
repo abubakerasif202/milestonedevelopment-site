@@ -1,13 +1,14 @@
-<svg width="420" height="140" viewBox="0 0 420 140" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<svg width="560" height="140" viewBox="0 0 560 140" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Milestone Development</title>
-  <desc id="desc">Milestone Development horizontal logo with geometric M construction mark.</desc>
-  <g transform="translate(5 0)">
-    <path d="M48 16V100H66V54.5L84 74.5L102 54.5V100H120V16L102 34L84 20L66 34L48 16Z" stroke="#18332F" stroke-width="8.4" stroke-linejoin="miter"/>
-    <path d="M54 16L66 28V100" stroke="#18332F" stroke-width="8.4" stroke-linejoin="miter"/>
-    <path d="M114 16L102 28V100" stroke="#18332F" stroke-width="8.4" stroke-linejoin="miter"/>
-    <path d="M58.5 31.5L84 57.5L109.5 31.5" stroke="#18332F" stroke-width="8.4" stroke-linecap="square" stroke-linejoin="miter"/>
-    <path d="M64.5 44.5L84 64L103.5 44.5" stroke="#18332F" stroke-width="8.4" stroke-linecap="square" stroke-linejoin="miter"/>
+  <desc id="desc">Milestone Development wordmark with a clear geometric architectural M mark.</desc>
+  <g transform="translate(16 18)">
+    <path d="M8 102V10L36 42L58 10L80 42L108 10V102H88V58L58 100L28 58V102H8Z" fill="#18332F"/>
+    <path d="M28 27L58 66L88 27V51L58 91L28 51V27Z" fill="#D8B980"/>
+    <path d="M8 102H108" stroke="#D8B980" stroke-width="8" stroke-linecap="square"/>
   </g>
-  <text x="155" y="72" fill="#18332F" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="800" letter-spacing="5">MILESTONE</text>
-  <text x="156" y="103" fill="#D8B980" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="800" letter-spacing="7">DEVELOPMENT</text>
+  <g transform="translate(156 34)">
+    <text x="0" y="38" fill="#18332F" font-family="Arial, Helvetica, sans-serif" font-size="43" font-weight="900" letter-spacing="2">MILESTONE</text>
+    <rect x="2" y="53" width="316" height="4" fill="#D8B980"/>
+    <text x="0" y="86" fill="#18332F" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800" letter-spacing="4">DEVELOPMENT</text>
+  </g>
 </svg>

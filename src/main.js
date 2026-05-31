@@ -116,7 +116,6 @@ const playHeroIntro = () => {
   }
 
   gsap.timeline({ defaults: { ease: 'power3.out' } })
-    .to('.preloader-mark', { scale: 1.02, duration: 0.2 }, 0)
     .from('.hero-copy > *', { opacity: 0, y: 28, duration: 0.82, stagger: 0.08, immediateRender: false }, 0.05)
     .from('.hero-panel-card', { opacity: 0, y: 28, duration: 0.72, stagger: 0.08, immediateRender: false }, 0.18)
     .from('.trust-bar > div', { opacity: 0, y: 24, duration: 0.72, stagger: 0.06, immediateRender: false }, 0.32);

@@ -52,9 +52,9 @@ test('primary navigation matches client-facing information architecture', () => 
 });
 
 test('homepage contains the premium hero, trust, services and leadership content', () => {
-  textIncludes('Building Better Futures. Delivering Excellence.');
+  textIncludes('Premium construction delivered with care.');
   textIncludes(
-    'Premium Australian construction and property development specialists delivering residential, commercial and industrial projects with trusted project management and quality workmanship.',
+    'Milestone Development helps clients plan, build and manage residential, commercial, industrial, renovation and home-and-land package projects with clear communication and builder-led oversight.',
   );
   textIncludes('View Projects');
   textIncludes('Request Consultation');
@@ -101,7 +101,7 @@ test('homepage contains the editorial project, gallery, process and contact sect
   }
 
   textIncludes('Cinematic Gallery');
-  textIncludes('A horizontal project sequence with editorial pacing.');
+  textIncludes('Project visuals across the main construction services.');
 
   for (const step of ['Consultation', 'Planning', 'Construction', 'Handover']) {
     textIncludes(step);
