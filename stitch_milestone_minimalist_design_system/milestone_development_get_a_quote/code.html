@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Get a Quote - Milestone Development</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700;800&amp;family=Inter:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-low": "#f0f5f1",
+                      "on-primary-fixed": "#03201c",
+                      "on-primary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "error": "#ba1a1a",
+                      "surface-container-high": "#e5e9e5",
+                      "secondary-fixed": "#ffdea3",
+                      "on-tertiary-container": "#b59051",
+                      "on-error-container": "#93000a",
+                      "surface-container": "#eaefeb",
+                      "muted-ash": "#5C6763",
+                      "surface-tint": "#48645f",
+                      "background": "#f6faf6",
+                      "inverse-primary": "#afcdc6",
+                      "on-surface-variant": "#414846",
+                      "forest-soft": "#244942",
+                      "surface": "#f6faf6",
+                      "outline-variant": "#c1c8c5",
+                      "surface-bright": "#f6faf6",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-container": "#3f2a00",
+                      "secondary-container": "#fddb9f",
+                      "outline": "#727876",
+                      "surface-container-highest": "#dfe4e0",
+                      "surface-dim": "#d6dbd7",
+                      "border-glass": "rgba(24, 51, 47, 0.14)",
+                      "on-secondary": "#ffffff",
+                      "secondary": "#735b2b",
+                      "on-tertiary-fixed": "#271900",
+                      "tertiary": "#251700",
+                      "primary-container": "#18332f",
+                      "cream-muted": "#EFE8DA",
+                      "on-tertiary-fixed-variant": "#5d4209",
+                      "on-secondary-fixed": "#261900",
+                      "on-background": "#181d1b",
+                      "secondary-fixed-dim": "#e2c289",
+                      "inverse-surface": "#2c322f",
+                      "inverse-on-surface": "#edf2ee",
+                      "tertiary-fixed-dim": "#e9c07d",
+                      "cream-canvas": "#F7F4EC",
+                      "on-secondary-container": "#775f2f",
+                      "surface-variant": "#dfe4e0",
+                      "forest-strong": "#0F2421",
+                      "on-error": "#ffffff",
+                      "primary-fixed-dim": "#afcdc6",
+                      "on-primary-container": "#7f9c96",
+                      "on-primary-fixed-variant": "#314c47",
+                      "on-surface": "#181d1b",
+                      "on-secondary-fixed-variant": "#594316",
+                      "primary-fixed": "#cbe9e2",
+                      "primary": "#021e1a",
+                      "tertiary-fixed": "#ffdeaa"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "stack-xl": "48px",
+                      "section-padding-lg": "120px",
+                      "stack-md": "24px",
+                      "stack-lg": "32px",
+                      "gutter": "24px",
+                      "container-max": "1280px",
+                      "stack-sm": "12px",
+                      "section-padding-md": "80px",
+                      "section-padding-sm": "60px"
+              },
+              "fontFamily": {
+                      "eyebrow": ["Inter"],
+                      "label-caps": ["Inter"],
+                      "heading-h3": ["Hanken Grotesk"],
+                      "display-h1-mobile": ["Hanken Grotesk"],
+                      "display-h1": ["Hanken Grotesk"],
+                      "heading-h2": ["Hanken Grotesk"],
+                      "body-md": ["Inter"],
+                      "body-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "eyebrow": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.15em", "fontWeight": "900" }],
+                      "label-caps": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                      "heading-h3": ["24px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                      "display-h1-mobile": ["42px", { "lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "800" }],
+                      "display-h1": ["74px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                      "heading-h2": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "800" }],
+                      "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                      "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .blueprint-bg {
+            background-image: 
+                linear-gradient(to right, rgba(24, 51, 47, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(24, 51, 47, 0.04) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+    </style>
+</head>
+<body class="bg-cream-canvas text-on-background antialiased relative min-h-screen flex flex-col">
+<!-- Blueprint Overlay -->
+<div class="fixed inset-0 pointer-events-none blueprint-bg z-0"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-cream-canvas/90 dark:bg-forest-strong/90 backdrop-blur-md border-b border-border-glass transition-transform duration-200 active:scale-95">
+<div class="flex justify-between items-center w-full px-10 py-4 max-w-container-max mx-auto">
+<!-- Brand Logo -->
+<a class="text-heading-h3 font-heading-h3 text-forest-strong dark:text-primary-fixed-dim tracking-tighter hover:opacity-80 transition-all duration-300" href="#">
+                Milestone Development
+            </a>
+<!-- Navigation Links -->
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-forest-soft dark:text-on-surface-variant hover:text-secondary transition-colors hover:opacity-80 duration-300" href="#">Projects</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-forest-soft dark:text-on-surface-variant hover:text-secondary transition-colors hover:opacity-80 duration-300" href="#">Services</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-forest-soft dark:text-on-surface-variant hover:text-secondary transition-colors hover:opacity-80 duration-300" href="#">About</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-forest-soft dark:text-on-surface-variant hover:text-secondary transition-colors hover:opacity-80 duration-300" href="#">News</a>
+</div>
+<!-- Trailing Action -->
+<button class="hidden md:block bg-secondary-fixed text-forest-strong px-6 py-3 rounded-lg font-label-caps text-label-caps uppercase tracking-widest hover:bg-forest-strong hover:text-white transition-colors duration-200">
+                Get a Quote
+            </button>
+<!-- Mobile Menu Icon -->
+<button class="md:hidden text-forest-strong">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0; font-size: 32px;">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Canvas -->
+<main class="flex-grow relative z-10 pt-section-padding-lg pb-section-padding-md">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-10 pt-section-padding-sm pb-section-padding-md flex flex-col items-center text-center">
+<span class="font-eyebrow text-eyebrow text-secondary uppercase mb-stack-md block">Build With Precision</span>
+<h1 class="font-display-h1-mobile md:font-display-h1 text-display-h1-mobile md:text-display-h1 text-forest-strong mb-stack-md max-w-4xl mx-auto">
+                Start Your Milestone Project.
+            </h1>
+<p class="font-body-lg text-body-lg text-muted-ash max-w-2xl mx-auto">
+                Select your project category below. Our architectural experts will review your structural requirements and provide a detailed, uncompromising proposal tailored to your vision.
+            </p>
+</section>
+<!-- Bento Grid Selection -->
+<section class="max-w-container-max mx-auto px-10 pb-section-padding-lg">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1: Residential (Hero Card spanning 2 cols) -->
+<div class="md:col-span-2 bg-surface-container-lowest rounded-xl border border-border-glass relative overflow-hidden group cursor-pointer shadow-sm hover:shadow-lg hover:shadow-forest-strong/5 transition-all duration-300 hover:-translate-y-1 min-h-[360px] flex flex-col justify-end p-8">
+<!-- Background Image -->
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A striking exterior shot of a highly modern residential home featuring sharp geometric lines, extensive glass facades, and warm timber accents. The home is bathed in warm, golden-hour sunlight against a clear sky, highlighting the premium craftsmanship and architectural precision. The surrounding landscape is manicured and lush, contributing to a high-end, luxurious light-mode aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDd6jGdx5-rmfy2QK4vHIbfjB_P2aEbz2cc8sLSLR4Z8DeGFADKDnvJSAyvG8knPRapDulHjrOEFigtHredrpLw-eMiH374AFay_bAygPB3Y5FdLT4jMlyLEzRr1Yvnmx9C8Iy79SE8K1F-a7U6nqy6J21JOuel-ATCUlBuRcjcHXbOSzm08Fop3sVIcKHa7KipwE_ngsc3XVaPSNp7In5vurbZqw4vVD5QLT8zb0-s_ApjDGzc1jzvp-YP6xRQhJoQbWOSEhvDD8gc');">
+</div>
+<!-- Overlay -->
+<div class="absolute inset-0 bg-forest-strong/70 group-hover:bg-forest-strong/80 transition-colors duration-300"></div>
+<!-- Content -->
+<div class="relative z-10 w-full md:w-2/3">
+<span class="material-symbols-outlined text-secondary-fixed mb-4" style="font-size: 40px; font-variation-settings: 'FILL' 1;">home_work</span>
+<h3 class="font-heading-h3 text-heading-h3 text-white mb-2">Residential Construction</h3>
+<p class="font-body-md text-body-md text-cream-muted mb-6">Bespoke architectural homes designed for elevated living. From foundation to final finish, we construct residences that define modern luxury.</p>
+<div class="flex items-center text-secondary-fixed font-label-caps text-label-caps uppercase tracking-widest group-hover:translate-x-2 transition-transform duration-300">
+                            Select Category <span class="material-symbols-outlined ml-2 text-[20px]">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Commercial -->
+<div class="bg-surface-container-lowest rounded-xl border border-border-glass p-8 relative overflow-hidden group cursor-pointer shadow-sm hover:shadow-lg hover:shadow-forest-strong/5 transition-all duration-300 hover:-translate-y-1 flex flex-col h-full">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+<span class="material-symbols-outlined text-forest-strong mb-6" style="font-size: 32px; font-variation-settings: 'FILL' 0;">domain</span>
+<h3 class="font-heading-h3 text-heading-h3 text-forest-strong mb-2">Commercial</h3>
+<p class="font-body-md text-body-md text-muted-ash mb-auto">Corporate headquarters, retail spaces, and structural fit-outs engineered for business performance.</p>
+<div class="mt-8 flex items-center text-secondary font-label-caps text-label-caps uppercase tracking-widest group-hover:translate-x-2 transition-transform duration-300">
+                        Select <span class="material-symbols-outlined ml-2 text-[20px]">arrow_forward</span>
+</div>
+</div>
+<!-- Card 3: Industrial -->
+<div class="bg-surface-container-lowest rounded-xl border border-border-glass p-8 relative overflow-hidden group cursor-pointer shadow-sm hover:shadow-lg hover:shadow-forest-strong/5 transition-all duration-300 hover:-translate-y-1 flex flex-col h-full">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+<span class="material-symbols-outlined text-forest-strong mb-6" style="font-size: 32px; font-variation-settings: 'FILL' 0;">factory</span>
+<h3 class="font-heading-h3 text-heading-h3 text-forest-strong mb-2">Industrial</h3>
+<p class="font-body-md text-body-md text-muted-ash mb-auto">Large-scale warehousing and manufacturing facilities built with robust structural integrity.</p>
+<div class="mt-8 flex items-center text-secondary font-label-caps text-label-caps uppercase tracking-widest group-hover:translate-x-2 transition-transform duration-300">
+                        Select <span class="material-symbols-outlined ml-2 text-[20px]">arrow_forward</span>
+</div>
+</div>
+<!-- Card 4: Renovations -->
+<div class="bg-surface-container-lowest rounded-xl border border-border-glass p-8 relative overflow-hidden group cursor-pointer shadow-sm hover:shadow-lg hover:shadow-forest-strong/5 transition-all duration-300 hover:-translate-y-1 flex flex-col h-full">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+<span class="material-symbols-outlined text-forest-strong mb-6" style="font-size: 32px; font-variation-settings: 'FILL' 0;">handyman</span>
+<h3 class="font-heading-h3 text-heading-h3 text-forest-strong mb-2">Renovations</h3>
+<p class="font-body-md text-body-md text-muted-ash mb-auto">Transformative structural updates and high-end remodeling for existing properties.</p>
+<div class="mt-8 flex items-center text-secondary font-label-caps text-label-caps uppercase tracking-widest group-hover:translate-x-2 transition-transform duration-300">
+                        Select <span class="material-symbols-outlined ml-2 text-[20px]">arrow_forward</span>
+</div>
+</div>
+<!-- Card 5: Home & Land Packages -->
+<div class="bg-surface-container-lowest rounded-xl border border-border-glass p-8 relative overflow-hidden group cursor-pointer shadow-sm hover:shadow-lg hover:shadow-forest-strong/5 transition-all duration-300 hover:-translate-y-1 flex flex-col h-full">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+<span class="material-symbols-outlined text-forest-strong mb-6" style="font-size: 32px; font-variation-settings: 'FILL' 0;">landscape</span>
+<h3 class="font-heading-h3 text-heading-h3 text-forest-strong mb-2">Home &amp; Land</h3>
+<p class="font-body-md text-body-md text-muted-ash mb-auto">Turnkey architectural solutions combining premium plots with pre-designed luxury residences.</p>
+<div class="mt-8 flex items-center text-secondary font-label-caps text-label-caps uppercase tracking-widest group-hover:translate-x-2 transition-transform duration-300">
+                        Select <span class="material-symbols-outlined ml-2 text-[20px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-section-padding-lg bg-forest-strong dark:bg-on-primary-fixed border-t border-border-glass">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-10 py-section-padding-md max-w-container-max mx-auto">
+<!-- Brand / Copyright Column -->
+<div class="md:col-span-5 flex flex-col justify-between">
+<div>
+<h2 class="text-heading-h2 font-heading-h2 text-secondary-fixed mb-6">Milestone Development</h2>
+<p class="font-body-md text-body-md text-cream-muted dark:text-surface-container opacity-80 max-w-sm">
+                        Building tomorrow's landmarks with precision, integrity, and uncompromising quality.
+                    </p>
+</div>
+<div class="mt-12 md:mt-0 font-body-md text-body-md text-muted-ash">
+                    © 2024 Milestone Development. Architectural Excellence.
+                </div>
+</div>
+<!-- Links Columns -->
+<div class="md:col-span-7 flex flex-col md:flex-row gap-12 md:justify-end">
+<div class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-muted-ash hover:text-secondary-fixed transition-colors hover:translate-x-1 duration-300" href="#">Residential Construction</a>
+<a class="font-body-md text-body-md text-muted-ash hover:text-secondary-fixed transition-colors hover:translate-x-1 duration-300" href="#">Commercial Projects</a>
+<a class="font-body-md text-body-md text-muted-ash hover:text-secondary-fixed transition-colors hover:translate-x-1 duration-300" href="#">Property Development</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-secondary-fixed font-bold hover:translate-x-1 transition-transform duration-300" href="#">Contact Us: 1800 008 883</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

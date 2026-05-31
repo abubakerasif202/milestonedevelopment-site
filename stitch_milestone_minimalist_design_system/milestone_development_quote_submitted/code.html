@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Quote Submission Success | Milestone Development</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700;800&amp;family=Inter:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-low": "#f0f5f1",
+                      "on-primary-fixed": "#03201c",
+                      "on-primary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "error": "#ba1a1a",
+                      "surface-container-high": "#e5e9e5",
+                      "secondary-fixed": "#ffdea3",
+                      "on-tertiary-container": "#b59051",
+                      "on-error-container": "#93000a",
+                      "surface-container": "#eaefeb",
+                      "muted-ash": "#5C6763",
+                      "surface-tint": "#48645f",
+                      "background": "#f6faf6",
+                      "inverse-primary": "#afcdc6",
+                      "on-surface-variant": "#414846",
+                      "forest-soft": "#244942",
+                      "surface": "#f6faf6",
+                      "outline-variant": "#c1c8c5",
+                      "surface-bright": "#f6faf6",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-container": "#3f2a00",
+                      "secondary-container": "#fddb9f",
+                      "outline": "#727876",
+                      "surface-container-highest": "#dfe4e0",
+                      "surface-dim": "#d6dbd7",
+                      "border-glass": "rgba(24, 51, 47, 0.14)",
+                      "on-secondary": "#ffffff",
+                      "secondary": "#735b2b",
+                      "on-tertiary-fixed": "#271900",
+                      "tertiary": "#251700",
+                      "primary-container": "#18332f",
+                      "cream-muted": "#EFE8DA",
+                      "on-tertiary-fixed-variant": "#5d4209",
+                      "on-secondary-fixed": "#261900",
+                      "on-background": "#181d1b",
+                      "secondary-fixed-dim": "#e2c289",
+                      "inverse-surface": "#2c322f",
+                      "inverse-on-surface": "#edf2ee",
+                      "tertiary-fixed-dim": "#e9c07d",
+                      "cream-canvas": "#F7F4EC",
+                      "on-secondary-container": "#775f2f",
+                      "surface-variant": "#dfe4e0",
+                      "forest-strong": "#0F2421",
+                      "on-error": "#ffffff",
+                      "primary-fixed-dim": "#afcdc6",
+                      "on-primary-container": "#7f9c96",
+                      "on-primary-fixed-variant": "#314c47",
+                      "on-surface": "#181d1b",
+                      "on-secondary-fixed-variant": "#594316",
+                      "primary-fixed": "#cbe9e2",
+                      "primary": "#021e1a",
+                      "tertiary-fixed": "#ffdeaa"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "stack-xl": "48px",
+                      "section-padding-lg": "120px",
+                      "stack-md": "24px",
+                      "stack-lg": "32px",
+                      "gutter": "24px",
+                      "container-max": "1280px",
+                      "stack-sm": "12px",
+                      "section-padding-md": "80px",
+                      "section-padding-sm": "60px"
+              },
+              "fontFamily": {
+                      "eyebrow": [
+                              "Inter"
+                      ],
+                      "label-caps": [
+                              "Inter"
+                      ],
+                      "heading-h3": [
+                              "Hanken Grotesk"
+                      ],
+                      "display-h1-mobile": [
+                              "Hanken Grotesk"
+                      ],
+                      "display-h1": [
+                              "Hanken Grotesk"
+                      ],
+                      "heading-h2": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "eyebrow": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.15em",
+                                      "fontWeight": "900"
+                              }
+                      ],
+                      "label-caps": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "heading-h3": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-h1-mobile": [
+                              "42px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "display-h1": [
+                              "74px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "heading-h2": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        .blueprint-pattern {
+            background-image: linear-gradient(to right, rgba(24, 51, 47, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(24, 51, 47, 0.05) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+      </style>
+</head>
+<body class="bg-cream-canvas text-forest-strong antialiased min-h-screen flex flex-col blueprint-pattern relative">
+<!-- TopNavBar Suppressed: Transactional/Confirmation Screen Intent -->
+<main class="flex-grow flex items-center justify-center py-section-padding-md px-10 relative z-10">
+<div class="max-w-4xl w-full mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-8 md:col-start-3 text-center">
+<!-- Success Icon -->
+<div class="inline-flex items-center justify-center w-24 h-24 rounded-full bg-forest-strong text-cream-canvas mb-stack-lg shadow-[0_8px_30px_rgba(15,36,33,0.12)]">
+<span class="material-symbols-outlined text-[48px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h1 class="font-display-h1 text-display-h1 hidden md:block mb-stack-md text-forest-strong tracking-tighter">Inquiry Received</h1>
+<h1 class="font-display-h1-mobile text-display-h1-mobile md:hidden mb-stack-md text-forest-strong tracking-tighter">Inquiry Received</h1>
+<p class="font-body-lg text-body-lg text-muted-ash mb-stack-xl max-w-2xl mx-auto">
+                    Thank you for your inquiry. Our team of architectural specialists will review your details and contact you within 24 hours to discuss your project vision.
+                </p>
+<!-- Submission Summary Card -->
+<div class="bg-surface-container-lowest rounded-xl border border-border-glass p-stack-lg mb-stack-xl text-left relative overflow-hidden shadow-[0_4px_24px_rgba(24,51,47,0.06)] hover:-translate-y-1 transition-transform duration-300">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary-fixed"></div>
+<div class="flex items-center justify-between border-b border-border-glass pb-stack-sm mb-stack-sm">
+<span class="font-eyebrow text-eyebrow text-on-tertiary-container uppercase tracking-widest">Submission Details</span>
+<span class="font-label-caps text-label-caps text-muted-ash">Ref: BLD-2409</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-stack-md">
+<div>
+<span class="block font-eyebrow text-eyebrow text-forest-strong uppercase mb-1">Project Type</span>
+<span class="font-body-md text-body-md text-muted-ash">Commercial Development</span>
+</div>
+<div>
+<span class="block font-eyebrow text-eyebrow text-forest-strong uppercase mb-1">Estimated Budget</span>
+<span class="font-body-md text-body-md text-muted-ash">$5M - $10M</span>
+</div>
+<div class="sm:col-span-2">
+<span class="block font-eyebrow text-eyebrow text-forest-strong uppercase mb-1">Contact Email</span>
+<span class="font-body-md text-body-md text-muted-ash">client@example.com</span>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row items-center justify-center gap-stack-md">
+<button class="w-full sm:w-auto bg-forest-strong text-on-primary font-label-caps text-label-caps uppercase tracking-widest px-8 py-4 rounded-xl hover:bg-[#0a1816] transition-colors duration-200 shadow-[0_4px_12px_rgba(15,36,33,0.1)]">
+                        Return Home
+                    </button>
+<button class="w-full sm:w-auto border border-forest-strong bg-transparent text-forest-strong font-label-caps text-label-caps uppercase tracking-widest px-8 py-4 rounded-xl hover:bg-forest-strong hover:text-on-primary transition-colors duration-200">
+                        Call 1800 008 883
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Suppressed: Keep focus strictly on the confirmation state -->
+</body></html>
