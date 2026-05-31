@@ -1,0 +1,21 @@
+<svg width="1200" height="820" viewBox="0 0 1200 820" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">AI generated industrial facility concept</title>
+  <desc id="desc">Modern industrial warehouse concept with strong structural bays and clean delivery access.</desc>
+  <rect width="1200" height="820" fill="#18332F"/>
+  <path d="M0 0h1200v820H0z" fill="url(#bg)"/>
+  <path d="M88 604h1024v108H88z" fill="#0F2421"/>
+  <path d="M156 344h888v260H156z" fill="#D8B980"/>
+  <path d="M204 386h792v218H204z" fill="#18332F"/>
+  <path d="M246 422h118v182H246zM398 422h118v182H398zM550 422h118v182H550zM702 422h118v182H702zM854 422h100v182H854z" fill="#CAD7D0" opacity=".54"/>
+  <path d="M126 344l168-116h612l168 116H126z" fill="#102421"/>
+  <path d="M192 344l124-74h568l124 74H192z" fill="#F7F4EC" opacity=".18"/>
+  <path d="M132 660h936" stroke="#D8B980" stroke-width="7"/>
+  <path d="M240 712h720" stroke="#F7F4EC" stroke-opacity=".22" stroke-width="2"/>
+  <defs>
+    <linearGradient id="bg" x1="96" x2="1078" y1="42" y2="784" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F4EC"/>
+      <stop offset=".5" stop-color="#75827D"/>
+      <stop offset="1" stop-color="#102421"/>
+    </linearGradient>
+  </defs>
+</svg>

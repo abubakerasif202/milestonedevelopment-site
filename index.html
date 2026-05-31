@@ -15,6 +15,12 @@
     <script>
       document.documentElement.classList.add("js");
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700;800&family=Inter:wght@400;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_AU" />
@@ -156,28 +162,30 @@
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
+    <div class="blueprint-overlay" aria-hidden="true"></div>
 
     <header class="site-header" data-header>
       <div class="container header-inner">
-        <a class="brand-link" href="#home" aria-label="Milestone Development home">
+        <a class="brand-link" href="/" aria-label="Milestone Development home">
           <img src="/assets/logo.svg" width="220" height="50" alt="Milestone Development" />
         </a>
 
         <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation" data-nav>
-          <a href="#home">Home</a>
+          <a href="/">Home</a>
           <a href="#about">About</a>
           <a href="#residential">Residential</a>
           <a href="#commercial">Commercial</a>
           <a href="#industrial">Industrial</a>
           <a href="#management">Management Services</a>
-          <a href="#contact">Contact</a>
+          <a href="/team.html">Meet the Team</a>
+          <a href="/contact.html">Contact</a>
         </nav>
 
         <div class="header-actions">
           <a class="call-link" href="tel:1800008883" aria-label="Call Milestone Development on 1800 008 883">
             1800 008 883
           </a>
-          <a class="button button-primary header-quote" href="#contact">Get a Quote</a>
+          <a class="button button-primary header-quote" href="/contact.html">Get a Quote</a>
           <button
             class="menu-toggle"
             type="button"
@@ -203,8 +211,8 @@
               experienced builder oversight, clear communication and detail-focused workmanship.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#contact">Discuss Your Project</a>
-              <a class="button button-secondary" href="#contact">Get a Quote</a>
+              <a class="button button-primary" href="/contact.html">Discuss Your Project</a>
+              <a class="button button-secondary" href="/contact.html">Get a Quote</a>
             </div>
             <ul class="trust-list" aria-label="Milestone Development trust points">
               <li>Residential and commercial capability</li>
@@ -215,28 +223,20 @@
 
           <div class="hero-visual reveal" aria-hidden="true">
             <div class="hero-visual-label">
-              <span>Milestone project delivery</span>
-              <strong>Concept to handover</strong>
+              <span>Milestone architectural identity</span>
+              <strong>3D logo motion</strong>
             </div>
-            <div class="building-scene">
-              <div class="sun-panel"></div>
-              <div class="tower tower-left">
-                <span></span><span></span><span></span><span></span>
-              </div>
-              <div class="tower tower-main">
-                <span></span><span></span><span></span><span></span><span></span><span></span>
-              </div>
-              <div class="home-form">
-                <div class="roof"></div>
-                <div class="home-body">
-                  <span></span><span></span><span></span>
+            <div class="logo-3d-stage">
+              <div class="logo-3d-core">
+                <div class="logo-3d-plane logo-plane-front"></div>
+                <div class="logo-3d-plane logo-plane-back"></div>
+                <div class="logo-3d-plane logo-plane-left"></div>
+                <div class="logo-3d-plane logo-plane-right"></div>
+                <div class="logo-3d-mark">
+                  <img src="/assets/logo-mark.svg" alt="" />
                 </div>
               </div>
-              <div class="plan-line plan-line-one"></div>
-              <div class="plan-line plan-line-two"></div>
-              <div class="site-marker marker-one"></div>
-              <div class="site-marker marker-two"></div>
-              <div class="ground-line"></div>
+              <div class="logo-3d-shadow"></div>
             </div>
           </div>
         </div>
@@ -285,7 +285,7 @@
               <p class="card-kicker">Homes and townhouses</p>
               <h3>Residential Construction</h3>
               <p>Custom homes, townhouses and residential builds delivered with detail-focused workmanship.</p>
-              <a href="#contact">Learn more</a>
+              <a href="/contact.html">Learn more</a>
             </article>
 
             <article class="service-card reveal" id="commercial">
@@ -299,7 +299,7 @@
               <p class="card-kicker">Business-ready spaces</p>
               <h3>Commercial Construction</h3>
               <p>Commercial spaces, fitouts and business-ready builds with accountable project coordination.</p>
-              <a href="#contact">Learn more</a>
+              <a href="/contact.html">Learn more</a>
             </article>
 
             <article class="service-card reveal" id="industrial">
@@ -313,7 +313,7 @@
               <p class="card-kicker">Durable facilities</p>
               <h3>Industrial Construction</h3>
               <p>Functional industrial facilities planned for durability, access, compliance and long-term use.</p>
-              <a href="#contact">Learn more</a>
+              <a href="/contact.html">Learn more</a>
             </article>
 
             <article class="service-card reveal" id="management">
@@ -327,7 +327,7 @@
               <p class="card-kicker">Delivery oversight</p>
               <h3>Management Services</h3>
               <p>Structured project support, communication and delivery oversight from early planning to handover.</p>
-              <a href="#contact">Learn more</a>
+              <a href="/contact.html">Learn more</a>
             </article>
 
             <article class="service-card reveal">
@@ -342,7 +342,7 @@
               <p class="card-kicker">Integrated pathway</p>
               <h3>Design &amp; Construct</h3>
               <p>Integrated planning and build pathways that simplify decisions and reduce delivery friction.</p>
-              <a href="#contact">Learn more</a>
+              <a href="/contact.html">Learn more</a>
             </article>
 
             <article class="service-card reveal">
@@ -357,7 +357,7 @@
               <p class="card-kicker">Upgrades and extensions</p>
               <h3>Renovations</h3>
               <p>Premium upgrades and extensions that improve comfort, usability, value and long-term appeal.</p>
-              <a href="#contact">Learn more</a>
+              <a href="/contact.html">Learn more</a>
             </article>
 
             <article class="service-card reveal">
@@ -372,7 +372,7 @@
               <p class="card-kicker">Land to handover</p>
               <h3>Home &amp; Land Packages</h3>
               <p>Guided home and land package support for clients seeking a clear development pathway.</p>
-              <a href="#contact">Learn more</a>
+              <a href="/contact.html">Learn more</a>
             </article>
           </div>
         </div>
@@ -451,7 +451,13 @@
 
           <div class="project-grid">
             <article class="project-card project-home reveal">
-              <div class="project-art" aria-hidden="true"></div>
+              <img
+                class="project-art"
+                src="/assets/projects/residential-concept.svg"
+                width="1200"
+                height="820"
+                alt="AI generated contemporary residential construction concept"
+              />
               <div class="project-copy">
                 <p class="project-kicker">Residential</p>
                 <h3>Contemporary Family Home</h3>
@@ -459,7 +465,13 @@
               </div>
             </article>
             <article class="project-card project-dual reveal">
-              <div class="project-art" aria-hidden="true"></div>
+              <img
+                class="project-art"
+                src="/assets/projects/dual-occupancy.svg"
+                width="1200"
+                height="820"
+                alt="AI generated dual occupancy development concept"
+              />
               <div class="project-copy">
                 <p class="project-kicker">Development</p>
                 <h3>Dual Occupancy Development</h3>
@@ -467,7 +479,13 @@
               </div>
             </article>
             <article class="project-card project-fitout reveal">
-              <div class="project-art" aria-hidden="true"></div>
+              <img
+                class="project-art"
+                src="/assets/projects/commercial-fitout.svg"
+                width="1200"
+                height="820"
+                alt="AI generated commercial fitout concept"
+              />
               <div class="project-copy">
                 <p class="project-kicker">Commercial</p>
                 <h3>Commercial Fitout</h3>
@@ -475,7 +493,13 @@
               </div>
             </article>
             <article class="project-card project-industrial reveal">
-              <div class="project-art" aria-hidden="true"></div>
+              <img
+                class="project-art"
+                src="/assets/projects/industrial-facility.svg"
+                width="1200"
+                height="820"
+                alt="AI generated industrial facility concept"
+              />
               <div class="project-copy">
                 <p class="project-kicker">Industrial</p>
                 <h3>Industrial Facility</h3>
@@ -483,7 +507,13 @@
               </div>
             </article>
             <article class="project-card project-renovation reveal">
-              <div class="project-art" aria-hidden="true"></div>
+              <img
+                class="project-art"
+                src="/assets/projects/luxury-renovation.svg"
+                width="1200"
+                height="820"
+                alt="AI generated luxury renovation concept"
+              />
               <div class="project-copy">
                 <p class="project-kicker">Renovation</p>
                 <h3>Luxury Renovation</h3>
@@ -491,7 +521,13 @@
               </div>
             </article>
             <article class="project-card project-package reveal">
-              <div class="project-art" aria-hidden="true"></div>
+              <img
+                class="project-art"
+                src="/assets/projects/home-land-package.svg"
+                width="1200"
+                height="820"
+                alt="AI generated home and land package concept"
+              />
               <div class="project-copy">
                 <p class="project-kicker">Home and land</p>
                 <h3>Home &amp; Land Package</h3>
@@ -561,7 +597,7 @@
             <h2 id="cta-title">Let's Build Something Great Together.</h2>
             <p>Contact Milestone Development today to discuss your next project.</p>
           </div>
-          <a class="button button-light" href="tel:1800008883">Call 1800 008 883</a>
+          <a class="button button-light" href="/contact.html">Start a Conversation</a>
         </div>
       </section>
 
@@ -628,7 +664,7 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          <a class="footer-logo" href="#home" aria-label="Milestone Development home">
+          <a class="footer-logo" href="/" aria-label="Milestone Development home">
             <img src="/assets/logo-mark.svg" width="56" height="56" alt="" aria-hidden="true" />
             <span>
               <strong>Milestone</strong>
@@ -641,11 +677,12 @@
           </p>
         </div>
         <nav class="footer-nav" aria-label="Footer navigation">
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#projects">Projects</a>
-          <a href="#process">Process</a>
-          <a href="#contact">Contact</a>
+          <a href="/#about">About</a>
+          <a href="/#services">Services</a>
+          <a href="/#projects">Projects</a>
+          <a href="/#process">Process</a>
+          <a href="/team.html">Meet the Team</a>
+          <a href="/contact.html">Contact</a>
         </nav>
         <div class="footer-contact">
           <span>Phone</span>

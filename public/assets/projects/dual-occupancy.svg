@@ -1,0 +1,19 @@
+<svg width="1200" height="820" viewBox="0 0 1200 820" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">AI generated dual occupancy development concept</title>
+  <desc id="desc">Premium dual occupancy development concept with two connected modern residences.</desc>
+  <rect width="1200" height="820" fill="#F7F4EC"/>
+  <path d="M0 0h1200v820H0z" fill="url(#site)"/>
+  <path d="M96 606h1008v120H96z" fill="#0F2421"/>
+  <path d="M156 400h410v206H156zM634 400h410v206H634z" fill="#18332F"/>
+  <path d="M126 400l164-142h292l42 142H126zM576 400l140-142h316l54 142H576z" fill="#D8B980"/>
+  <path d="M206 436h112v170H206zM356 436h150v170H356zM684 436h112v170H684zM834 436h150v170H834z" fill="#C9D5CF" opacity=".64"/>
+  <path d="M590 270v438" stroke="#D8B980" stroke-width="5"/>
+  <path d="M144 650h912" stroke="#F7F4EC" stroke-opacity=".22" stroke-width="2"/>
+  <defs>
+    <linearGradient id="site" x1="130" x2="1058" y1="50" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF8EA"/>
+      <stop offset=".5" stop-color="#A9B9B1"/>
+      <stop offset="1" stop-color="#18332F"/>
+    </linearGradient>
+  </defs>
+</svg>

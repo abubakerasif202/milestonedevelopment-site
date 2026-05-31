@@ -1,0 +1,23 @@
+<svg width="1200" height="820" viewBox="0 0 1200 820" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">AI generated luxury renovation concept</title>
+  <desc id="desc">Premium renovation concept showing a refined open living space with timber, stone and garden connection.</desc>
+  <rect width="1200" height="820" fill="#F7F4EC"/>
+  <path d="M0 0h1200v820H0z" fill="url(#room)"/>
+  <path d="M112 120h976v560H112z" fill="#18332F"/>
+  <path d="M164 174h872v430H164z" fill="#F7F4EC"/>
+  <path d="M198 214h290v352H198z" fill="#102421"/>
+  <path d="M528 214h474v352H528z" fill="#18332F"/>
+  <path d="M228 246h230v288H228z" fill="#BFD6CE" opacity=".6"/>
+  <path d="M558 246h406v142H558z" fill="#D8B980" opacity=".3"/>
+  <path d="M558 420h406v114H558z" fill="#102421"/>
+  <path d="M262 618h676v70H262z" fill="#D8B980"/>
+  <path d="M318 576h248l88 42H256l62-42z" fill="#18332F"/>
+  <path d="M0 690h1200v130H0z" fill="#102421"/>
+  <defs>
+    <linearGradient id="room" x1="52" x2="1122" y1="44" y2="766" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF8EB"/>
+      <stop offset=".52" stop-color="#EFE8DA"/>
+      <stop offset="1" stop-color="#8B6D3A"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -40,6 +40,15 @@ revealItems.forEach((item, index) => {
   item.style.setProperty('--reveal-index', String(Math.min(index % 8, 7)));
 });
 
+const revealVisibleItems = () => {
+  revealItems.forEach((item) => {
+    const rect = item.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 48 && rect.bottom > 0) {
+      item.classList.add('is-visible');
+    }
+  });
+};
+
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver(
     (entries) => {
@@ -52,11 +61,13 @@ if ('IntersectionObserver' in window) {
     },
     {
       threshold: 0.12,
-      rootMargin: '0px 0px -48px',
+      rootMargin: '120px 0px -32px',
     },
   );
 
   revealItems.forEach((item) => observer.observe(item));
+  revealVisibleItems();
+  window.addEventListener('scroll', revealVisibleItems, { passive: true });
 } else {
   revealItems.forEach((item) => item.classList.add('is-visible'));
 }

@@ -1,0 +1,21 @@
+<svg width="1200" height="820" viewBox="0 0 1200 820" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">AI generated home and land package concept</title>
+  <desc id="desc">Home and land package concept with a contemporary home, planned lots and landscape lines.</desc>
+  <rect width="1200" height="820" fill="#F7F4EC"/>
+  <path d="M0 0h1200v820H0z" fill="url(#land)"/>
+  <path d="M0 570c220-96 414-98 582-6s374 94 618 4v252H0V570z" fill="#18332F"/>
+  <path d="M134 638c190-46 356-42 498 12s284 54 434 4" stroke="#D8B980" stroke-width="6" opacity=".7"/>
+  <path d="M284 402h502v170H284z" fill="#18332F"/>
+  <path d="M244 402l216-148h408l-82 148H244z" fill="#D8B980"/>
+  <path d="M336 438h144v134H336zM528 438h184v134H528z" fill="#C8D5CE" opacity=".64"/>
+  <path d="M136 684h928" stroke="#F7F4EC" stroke-opacity=".2" stroke-width="2"/>
+  <path d="M902 448h118v124H902z" fill="#102421"/>
+  <path d="M884 448l68-72 88 72H884z" fill="#D8B980"/>
+  <defs>
+    <linearGradient id="land" x1="118" x2="1078" y1="38" y2="778" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF9EF"/>
+      <stop offset=".45" stop-color="#C7D2CB"/>
+      <stop offset="1" stop-color="#244942"/>
+    </linearGradient>
+  </defs>
+</svg>

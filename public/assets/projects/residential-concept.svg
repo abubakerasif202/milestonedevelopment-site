@@ -1,0 +1,22 @@
+<svg width="1200" height="820" viewBox="0 0 1200 820" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">AI generated residential construction concept</title>
+  <desc id="desc">Premium contemporary residential home concept with glass, stone and warm architectural lighting.</desc>
+  <rect width="1200" height="820" fill="#18332F"/>
+  <path d="M0 0h1200v820H0z" fill="url(#sky)"/>
+  <path d="M0 610c190-70 375-75 555-15s410 64 645-20v245H0V610z" fill="#102421"/>
+  <path d="M174 544h842v72H174z" fill="#0B1F1C"/>
+  <path d="M260 356h518l168 188H130l130-188z" fill="#D8B980"/>
+  <path d="M300 386h454l112 126H210l90-126z" fill="#F7F4EC"/>
+  <path d="M245 512h662v94H245z" fill="#18332F"/>
+  <path d="M315 426h120v180H315zM480 426h215v180H480zM738 426h92v180h-92z" fill="#0F2421"/>
+  <path d="M333 442h84v145h-84zM498 442h180v145H498zM754 442h58v145h-58z" fill="#BFD6CE" opacity=".72"/>
+  <path d="M214 628h774" stroke="#D8B980" stroke-width="8"/>
+  <path d="M146 680h900" stroke="#F7F4EC" stroke-opacity=".28" stroke-width="2"/>
+  <defs>
+    <linearGradient id="sky" x1="178" x2="1004" y1="34" y2="780" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F4EC"/>
+      <stop offset=".45" stop-color="#9BAEA4"/>
+      <stop offset="1" stop-color="#18332F"/>
+    </linearGradient>
+  </defs>
+</svg>

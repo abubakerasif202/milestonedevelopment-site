@@ -1,0 +1,21 @@
+<svg width="1200" height="820" viewBox="0 0 1200 820" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">AI generated commercial fitout concept</title>
+  <desc id="desc">Premium commercial lobby and office fitout concept with stone reception and warm lighting.</desc>
+  <rect width="1200" height="820" fill="#F7F4EC"/>
+  <path d="M0 0h1200v820H0z" fill="url(#wash)"/>
+  <path d="M106 132h988v498H106z" fill="#18332F"/>
+  <path d="M146 174h906v410H146z" fill="#F7F4EC"/>
+  <path d="M188 218h258v318H188zM488 218h524v318H488z" fill="#102421"/>
+  <path d="M224 254h184v248H224zM526 254h184v248H526zM742 254h232v248H742z" fill="#D8B980" opacity=".32"/>
+  <path d="M184 600h844v94H184z" fill="#18332F"/>
+  <path d="M286 556h410l80 44H232l54-44z" fill="#D8B980"/>
+  <path d="M0 702h1200v118H0z" fill="#102421"/>
+  <path d="M168 704h864" stroke="#D8B980" stroke-width="5"/>
+  <defs>
+    <linearGradient id="wash" x1="176" x2="978" y1="58" y2="804" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fffaf0"/>
+      <stop offset=".58" stop-color="#EFE8DA"/>
+      <stop offset="1" stop-color="#8A9A91"/>
+    </linearGradient>
+  </defs>
+</svg>
