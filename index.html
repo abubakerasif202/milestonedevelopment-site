@@ -8,9 +8,13 @@
       name="description"
       content="Milestone Development provides residential, commercial, industrial and renovation construction services with experienced project management and trusted workmanship."
     />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="https://milestonedevelopment.com.au/" />
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
     <meta name="theme-color" content="#18332F" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
 
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_AU" />
@@ -23,6 +27,9 @@
     <meta property="og:site_name" content="Milestone Development" />
     <meta property="og:image" content="https://milestonedevelopment.com.au/assets/logo.svg" />
     <meta property="og:image:alt" content="Milestone Development construction logo" />
+    <meta property="og:image:type" content="image/svg+xml" />
+    <meta property="og:image:width" content="420" />
+    <meta property="og:image:height" content="96" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Milestone Development | Residential &amp; Commercial Construction" />
@@ -37,70 +44,110 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": ["LocalBusiness", "GeneralContractor"],
-        "@id": "https://milestonedevelopment.com.au/#business",
-        "name": "Milestone Development",
-        "telephone": "1800 008 883",
-        "url": "https://milestonedevelopment.com.au/",
-        "image": "https://milestonedevelopment.com.au/assets/logo.svg",
-        "areaServed": {
-          "@type": "Country",
-          "name": "Australia"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "AU"
-        },
-        "priceRange": "$$",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "1800 008 883",
-          "contactType": "customer enquiries",
-          "areaServed": "AU",
-          "availableLanguage": "English"
-        },
-        "description": "Milestone Development provides residential, commercial, industrial and renovation construction services with experienced project management and trusted workmanship.",
-        "makesOffer": [
+        "@graph": [
           {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Residential Construction"
+            "@type": "WebSite",
+            "@id": "https://milestonedevelopment.com.au/#website",
+            "name": "Milestone Development",
+            "url": "https://milestonedevelopment.com.au/",
+            "inLanguage": "en-AU",
+            "publisher": {
+              "@id": "https://milestonedevelopment.com.au/#business"
             }
           },
           {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Commercial Construction"
-            }
+            "@type": "WebPage",
+            "@id": "https://milestonedevelopment.com.au/#webpage",
+            "url": "https://milestonedevelopment.com.au/",
+            "name": "Milestone Development | Residential & Commercial Construction",
+            "isPartOf": {
+              "@id": "https://milestonedevelopment.com.au/#website"
+            },
+            "about": {
+              "@id": "https://milestonedevelopment.com.au/#business"
+            },
+            "description": "Milestone Development provides residential, commercial, industrial and renovation construction services with experienced project management and trusted workmanship.",
+            "inLanguage": "en-AU"
           },
           {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Industrial Construction"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Renovations"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Home and Land Packages"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Project Management"
+            "@type": ["LocalBusiness", "GeneralContractor"],
+            "@id": "https://milestonedevelopment.com.au/#business",
+            "name": "Milestone Development",
+            "telephone": "1800 008 883",
+            "url": "https://milestonedevelopment.com.au/",
+            "logo": "https://milestonedevelopment.com.au/assets/logo.svg",
+            "image": "https://milestonedevelopment.com.au/assets/logo.svg",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Australia"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "AU"
+            },
+            "priceRange": "$$",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "1800 008 883",
+              "contactType": "customer enquiries",
+              "areaServed": "AU",
+              "availableLanguage": "English"
+            },
+            "description": "Milestone Development provides residential, commercial, industrial and renovation construction services with experienced project management and trusted workmanship.",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Construction and project delivery services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Residential Construction"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Commercial Construction"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Industrial Construction"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Renovations"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Design and Construct"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Home and Land Packages"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Project Management"
+                  }
+                }
+              ]
             }
           }
         ]
@@ -150,23 +197,27 @@
         <div class="container hero-grid">
           <div class="hero-content reveal">
             <p class="eyebrow">Premium construction and property development</p>
-            <h1>Building Better Futures. Delivering Excellence.</h1>
+            <h1>Residential and commercial construction, delivered with confidence.</h1>
             <p class="hero-text">
-              Milestone Development delivers premium residential, commercial and industrial construction solutions with
-              quality craftsmanship, clear communication and trusted project management.
+              Milestone Development plans and delivers residential, commercial, industrial and renovation projects with
+              experienced builder oversight, clear communication and detail-focused workmanship.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#services">Our Services</a>
+              <a class="button button-primary" href="#contact">Discuss Your Project</a>
               <a class="button button-secondary" href="#contact">Get a Quote</a>
             </div>
             <ul class="trust-list" aria-label="Milestone Development trust points">
-              <li>Quality Craftsmanship</li>
-              <li>Trusted by Clients</li>
-              <li>On Time &amp; On Budget</li>
+              <li>Residential and commercial capability</li>
+              <li>Experienced project management</li>
+              <li>Clear scope and communication</li>
             </ul>
           </div>
 
           <div class="hero-visual reveal" aria-hidden="true">
+            <div class="hero-visual-label">
+              <span>Milestone project delivery</span>
+              <strong>Concept to handover</strong>
+            </div>
             <div class="building-scene">
               <div class="sun-panel"></div>
               <div class="tower tower-left">
@@ -191,6 +242,26 @@
         </div>
       </section>
 
+      <section class="trust-band" aria-label="Project delivery strengths">
+        <div class="container trust-band-grid">
+          <div class="reveal">
+            <span>01</span>
+            <strong>Planning clarity</strong>
+            <p>Early scope, site and budget guidance before construction decisions are locked in.</p>
+          </div>
+          <div class="reveal">
+            <span>02</span>
+            <strong>Builder-led delivery</strong>
+            <p>Experienced oversight across workmanship, sequencing, materials and handover details.</p>
+          </div>
+          <div class="reveal">
+            <span>03</span>
+            <strong>Practical communication</strong>
+            <p>Simple updates and accountable project coordination from first call to completion.</p>
+          </div>
+        </div>
+      </section>
+
       <section class="section services-section" id="services" aria-labelledby="services-title">
         <div class="container">
           <div class="section-heading reveal">
@@ -211,6 +282,7 @@
                   <path d="M15 20v-8h7" />
                 </svg>
               </div>
+              <p class="card-kicker">Homes and townhouses</p>
               <h3>Residential Construction</h3>
               <p>Custom homes, townhouses and residential builds delivered with detail-focused workmanship.</p>
               <a href="#contact">Learn more</a>
@@ -224,6 +296,7 @@
                   <path d="M8 40h32" />
                 </svg>
               </div>
+              <p class="card-kicker">Business-ready spaces</p>
               <h3>Commercial Construction</h3>
               <p>Commercial spaces, fitouts and business-ready builds with accountable project coordination.</p>
               <a href="#contact">Learn more</a>
@@ -237,6 +310,7 @@
                   <path d="M8 39h32" />
                 </svg>
               </div>
+              <p class="card-kicker">Durable facilities</p>
               <h3>Industrial Construction</h3>
               <p>Functional industrial facilities planned for durability, access, compliance and long-term use.</p>
               <a href="#contact">Learn more</a>
@@ -250,6 +324,7 @@
                   <path d="M32 20l4 4 7-8" />
                 </svg>
               </div>
+              <p class="card-kicker">Delivery oversight</p>
               <h3>Management Services</h3>
               <p>Structured project support, communication and delivery oversight from early planning to handover.</p>
               <a href="#contact">Learn more</a>
@@ -264,6 +339,7 @@
                   <path d="M14 14h12" />
                 </svg>
               </div>
+              <p class="card-kicker">Integrated pathway</p>
               <h3>Design &amp; Construct</h3>
               <p>Integrated planning and build pathways that simplify decisions and reduce delivery friction.</p>
               <a href="#contact">Learn more</a>
@@ -278,6 +354,7 @@
                   <path d="M31 20 38 13" />
                 </svg>
               </div>
+              <p class="card-kicker">Upgrades and extensions</p>
               <h3>Renovations</h3>
               <p>Premium upgrades and extensions that improve comfort, usability, value and long-term appeal.</p>
               <a href="#contact">Learn more</a>
@@ -292,6 +369,7 @@
                   <path d="M12 15h24" />
                 </svg>
               </div>
+              <p class="card-kicker">Land to handover</p>
               <h3>Home &amp; Land Packages</h3>
               <p>Guided home and land package support for clients seeking a clear development pathway.</p>
               <a href="#contact">Learn more</a>
@@ -332,19 +410,31 @@
           </div>
         </div>
 
+        <div class="container team-heading reveal">
+          <p class="eyebrow">Team</p>
+          <h2>Experienced construction leadership.</h2>
+          <p>
+            The Milestone Development team brings practical building knowledge, certified delivery experience and
+            development support for clients across different project types.
+          </p>
+        </div>
+
         <div class="container team-grid" aria-label="Milestone Development team">
           <article class="team-card reveal">
             <span>NH</span>
+            <p class="card-kicker">Construction experience</p>
             <h3>Nemat Haidari</h3>
             <p>20 years experience in construction</p>
           </article>
           <article class="team-card reveal">
             <span>MM</span>
+            <p class="card-kicker">Certified builder</p>
             <h3>Mohammad Mohsini</h3>
             <p>Certified builder with 10 years construction experience</p>
           </article>
           <article class="team-card reveal">
             <span>HJ</span>
+            <p class="card-kicker">Home and land packages</p>
             <h3>Hussain Jafari</h3>
             <p>Home and land package specialist</p>
           </article>
@@ -356,13 +446,14 @@
           <div class="section-heading reveal">
             <p class="eyebrow">Projects</p>
             <h2 id="projects-title">Built for Homes, Workplaces and Growth.</h2>
-            <p>Representative project categories styled to reflect the premium finish Milestone Development delivers.</p>
+            <p>Project categories shown as illustrative examples of the work Milestone Development can plan and deliver.</p>
           </div>
 
           <div class="project-grid">
             <article class="project-card project-home reveal">
               <div class="project-art" aria-hidden="true"></div>
               <div class="project-copy">
+                <p class="project-kicker">Residential</p>
                 <h3>Contemporary Family Home</h3>
                 <p>Modern residential living with practical detail and refined finishes.</p>
               </div>
@@ -370,6 +461,7 @@
             <article class="project-card project-dual reveal">
               <div class="project-art" aria-hidden="true"></div>
               <div class="project-copy">
+                <p class="project-kicker">Development</p>
                 <h3>Dual Occupancy Development</h3>
                 <p>Efficient site use, strong planning and quality multi-dwelling delivery.</p>
               </div>
@@ -377,6 +469,7 @@
             <article class="project-card project-fitout reveal">
               <div class="project-art" aria-hidden="true"></div>
               <div class="project-copy">
+                <p class="project-kicker">Commercial</p>
                 <h3>Commercial Fitout</h3>
                 <p>Professional interiors prepared for teams, customers and operations.</p>
               </div>
@@ -384,6 +477,7 @@
             <article class="project-card project-industrial reveal">
               <div class="project-art" aria-hidden="true"></div>
               <div class="project-copy">
+                <p class="project-kicker">Industrial</p>
                 <h3>Industrial Facility</h3>
                 <p>Durable industrial spaces planned around use, safety and scale.</p>
               </div>
@@ -391,6 +485,7 @@
             <article class="project-card project-renovation reveal">
               <div class="project-art" aria-hidden="true"></div>
               <div class="project-copy">
+                <p class="project-kicker">Renovation</p>
                 <h3>Luxury Renovation</h3>
                 <p>High-quality transformations for existing homes and investment assets.</p>
               </div>
@@ -398,6 +493,7 @@
             <article class="project-card project-package reveal">
               <div class="project-art" aria-hidden="true"></div>
               <div class="project-copy">
+                <p class="project-kicker">Home and land</p>
                 <h3>Home &amp; Land Package</h3>
                 <p>Development support that connects land, design, build and handover.</p>
               </div>
@@ -478,16 +574,29 @@
               Share a few details and the Milestone Development team will review the project type, timing and next steps.
             </p>
             <a class="contact-phone" href="tel:1800008883">1800 008 883</a>
+            <div class="contact-points" aria-label="Contact benefits">
+              <div>
+                <strong>Fast first step</strong>
+                <span>Share the project type, location and timing.</span>
+              </div>
+              <div>
+                <strong>Builder review</strong>
+                <span>The team can guide scope, delivery path and next actions.</span>
+              </div>
+            </div>
           </div>
 
-          <form class="contact-form reveal" data-contact-form>
+          <form class="contact-form reveal" aria-describedby="form-helper form-status" data-contact-form>
+            <p class="form-helper full-span" id="form-helper">
+              Use this enquiry form to prepare the project details before speaking with the team.
+            </p>
             <div class="form-row">
               <label for="name">Name</label>
               <input id="name" name="name" type="text" autocomplete="name" required />
             </div>
             <div class="form-row">
               <label for="phone">Phone</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+              <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required />
             </div>
             <div class="form-row">
               <label for="email">Email</label>
@@ -510,7 +619,7 @@
               <textarea id="message" name="message" rows="5" required></textarea>
             </div>
             <button class="button button-primary full-span" type="submit">Send Enquiry</button>
-            <p class="form-status full-span" role="status" aria-live="polite" data-form-status></p>
+            <p class="form-status full-span" id="form-status" role="status" aria-live="polite" data-form-status></p>
           </form>
         </div>
       </section>
@@ -520,7 +629,11 @@
       <div class="container footer-grid">
         <div>
           <a class="footer-logo" href="#home" aria-label="Milestone Development home">
-            <img src="/assets/logo.svg" width="220" height="50" alt="Milestone Development" />
+            <img src="/assets/logo-mark.svg" width="56" height="56" alt="" aria-hidden="true" />
+            <span>
+              <strong>Milestone</strong>
+              <small>Development</small>
+            </span>
           </a>
           <p>
             Premium construction, property development, renovations and project management across residential,

@@ -63,8 +63,10 @@ if ('IntersectionObserver' in window) {
 
 contactForm?.addEventListener('submit', (event) => {
   event.preventDefault();
+  const projectType = new FormData(contactForm).get('project-type');
   contactForm.reset();
   if (formStatus) {
-    formStatus.textContent = 'Thank you. Your enquiry has been prepared and the team will be in contact shortly.';
+    const projectLabel = projectType ? ` for ${projectType}` : '';
+    formStatus.textContent = `Thank you. Your enquiry details${projectLabel} are ready. Please call 1800 008 883 to speak with the team.`;
   }
 });
