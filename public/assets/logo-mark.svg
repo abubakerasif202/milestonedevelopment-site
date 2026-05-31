@@ -1,0 +1,8 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Milestone Development logo mark</title>
+  <desc id="desc">Geometric M construction mark in forest green and sand gold.</desc>
+  <rect width="96" height="96" rx="8" fill="#18332F"/>
+  <path d="M16 72V27L31.5 45.5L48 22L64.5 45.5L80 27V72H67.5V52.5L48 79L28.5 52.5V72H16Z" fill="#D8B980"/>
+  <path d="M28.5 72V52.5L48 79L67.5 52.5V72H57.5L48 59.5L38.5 72H28.5Z" fill="#F7F4EC" fill-opacity="0.9"/>
+  <path d="M16 72H80" stroke="#F7F4EC" stroke-opacity="0.32" stroke-width="3"/>
+</svg>
