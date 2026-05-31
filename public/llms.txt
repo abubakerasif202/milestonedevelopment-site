@@ -1,0 +1,23 @@
+# Milestone Development
+
+Milestone Development provides premium residential, commercial, industrial, renovation, design and construct, management services, and home and land package support.
+
+## Core Pages
+
+- [Home](https://milestonedevelopment.com.au/): Construction services, project categories, process, team, and enquiry form.
+- [Meet the Team](https://milestonedevelopment.com.au/team.html): Mohammad Mohsini and Hussain Jafari.
+- [Contact](https://milestonedevelopment.com.au/contact.html): Project enquiry details and phone contact.
+
+## Services
+
+- Residential construction
+- Commercial construction
+- Industrial construction
+- Renovations
+- Design and construct
+- Management services
+- Home and land packages
+
+## Contact
+
+Phone: 1800 008 883
