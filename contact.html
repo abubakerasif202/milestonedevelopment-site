@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Milestone Development | Get a Construction Quote</title>
+    <title>Contact Milestone Development | Request Consultation</title>
     <meta
       name="description"
-      content="Contact Milestone Development to discuss residential, commercial, industrial, renovation, management services or home-and-land package projects."
+      content="Contact Milestone Development to discuss residential, commercial, industrial construction, renovations, home and land packages or project management services."
     />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="https://milestonedevelopment.com.au/contact.html" />
@@ -18,21 +18,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700;800&family=Inter:wght@400;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_AU" />
-    <meta property="og:title" content="Contact Milestone Development | Get a Construction Quote" />
+    <meta property="og:title" content="Contact Milestone Development | Request Consultation" />
     <meta
       property="og:description"
-      content="Start a conversation with Milestone Development about your next residential, commercial or industrial construction project."
+      content="Start a premium construction conversation with Milestone Development about your residential, commercial or industrial project."
     />
     <meta property="og:url" content="https://milestonedevelopment.com.au/contact.html" />
     <meta property="og:site_name" content="Milestone Development" />
     <meta property="og:image" content="https://milestonedevelopment.com.au/assets/logo.svg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Contact Milestone Development | Get a Construction Quote" />
+    <meta name="twitter:title" content="Contact Milestone Development | Request Consultation" />
     <meta
       name="twitter:description"
       content="Discuss your next construction or development project with Milestone Development."
@@ -50,11 +50,11 @@
         </a>
         <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation" data-nav>
           <a href="/">Home</a>
-          <a href="/#about">About</a>
-          <a href="/#residential">Residential</a>
-          <a href="/#commercial">Commercial</a>
-          <a href="/#industrial">Industrial</a>
-          <a href="/#management">Management Services</a>
+          <a href="/about.html">About</a>
+          <a href="/services.html">Services</a>
+          <a href="/projects.html">Projects</a>
+          <a href="/process.html">Process</a>
+          <a href="/team.html">Meet the Team</a>
           <a href="/contact.html" aria-current="page">Contact</a>
         </nav>
         <div class="header-actions">
@@ -80,8 +80,8 @@
       <section class="page-hero contact-page-hero">
         <div class="container page-hero-grid">
           <div class="reveal">
-            <p class="eyebrow">Contact</p>
-            <h1>Start a construction conversation with the right details.</h1>
+            <p class="eyebrow">Contact Us</p>
+            <h1>Start a premium construction conversation.</h1>
             <p>
               Tell us the project type, location and timing. The Milestone Development team will review the brief and
               guide the next step.
@@ -94,7 +94,7 @@
           <div class="contact-detail-panel reveal">
             <div>
               <span>Project enquiries</span>
-              <strong>Residential, commercial, industrial and renovations</strong>
+              <strong>Residential, commercial, industrial, renovations, packages</strong>
             </div>
             <div>
               <span>Phone</span>
@@ -102,7 +102,7 @@
             </div>
             <div>
               <span>Service area</span>
-              <strong>Australia</strong>
+              <strong>Australia-wide</strong>
             </div>
           </div>
         </div>
@@ -125,6 +125,14 @@
               <div>
                 <strong>Direct phone support</strong>
                 <span>Prefer to talk now? Call the team on 1800 008 883.</span>
+              </div>
+              <div>
+                <strong>Email Support</strong>
+                <span><a href="mailto:admin@milestonedevelopment.com.au">admin@milestonedevelopment.com.au</a></span>
+              </div>
+              <div>
+                <strong>Corporate Address</strong>
+                <span>Level 14, 275 Alfred St North, North Sydney NSW 2060</span>
               </div>
             </div>
           </div>
@@ -153,13 +161,37 @@
                 <option>Commercial Construction</option>
                 <option>Industrial Construction</option>
                 <option>Renovation</option>
+                <option>Design &amp; Construct</option>
                 <option>Home &amp; Land Package</option>
                 <option>Management Services</option>
               </select>
             </div>
+            <div class="form-row">
+              <label for="location">Location / Site Address</label>
+              <input id="location" name="location" type="text" placeholder="e.g., North Sydney, NSW" required />
+            </div>
+            <div class="form-row">
+              <label for="timeline">Timeline / Preferred Start</label>
+              <select id="timeline" name="timeline" required>
+                <option value="">Select timeline</option>
+                <option>Immediate (Within 3 months)</option>
+                <option>Planning Phase (3-6 months)</option>
+                <option>Future Concept (6+ months)</option>
+              </select>
+            </div>
             <div class="form-row full-span">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
+              <label for="budget">Approximate Budget Guidance</label>
+              <select id="budget" name="budget" required>
+                <option value="">Select budget range</option>
+                <option>Under $250k</option>
+                <option>$250k - $750k</option>
+                <option>$750k - $2M</option>
+                <option>Over $2M</option>
+              </select>
+            </div>
+            <div class="form-row full-span">
+              <label for="message">Project Description / Message</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Outline key rooms, commercial purposes, or specific structural details..."></textarea>
             </div>
             <button class="button button-primary full-span" type="submit">Send Enquiry</button>
             <p class="form-status full-span" id="form-status" role="status" aria-live="polite" data-form-status></p>
@@ -184,17 +216,33 @@
           </p>
         </div>
         <nav class="footer-nav" aria-label="Footer navigation">
-          <a href="/#about">About</a>
-          <a href="/#services">Services</a>
-          <a href="/#projects">Projects</a>
-          <a href="/#process">Process</a>
-          <a href="/#management">Management Services</a>
+          <a href="/about.html">About</a>
+          <a href="/services.html">Services</a>
+          <a href="/projects.html">Projects</a>
+          <a href="/process.html">Process</a>
+          <a href="/team.html">Meet the Team</a>
           <a href="/contact.html">Contact</a>
         </nav>
-        <div class="footer-contact">
-          <span>Phone</span>
-          <a href="tel:1800008883">1800 008 883</a>
-        </div>
+        <address class="footer-contact">
+          <div>
+            <span>Phone</span>
+            <a href="tel:1800008883">1800 008 883</a>
+          </div>
+          <div>
+            <span>Email</span>
+            <a href="mailto:admin@milestonedevelopment.com.au">admin@milestonedevelopment.com.au</a>
+          </div>
+          <div>
+            <span>Address</span>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Level+14%2C+275+Alfred+St+North%2C+North+Sydney+NSW+2060"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Level 14, 275 Alfred St North, North Sydney NSW 2060
+            </a>
+          </div>
+        </address>
       </div>
       <div class="container footer-bottom">
         <p>&copy; 2026 Milestone Development. All rights reserved.</p>

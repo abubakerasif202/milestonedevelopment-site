@@ -111,7 +111,7 @@ const setInitialMotionState = () => {
 };
 
 const playHeroIntro = () => {
-  if (prefersReducedMotion) {
+  if (prefersReducedMotion || !document.querySelector('.hero-copy')) {
     return;
   }
 
