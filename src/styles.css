@@ -1091,6 +1091,7 @@ h3 {
 
 .contact-points {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
   margin-top: 30px;
 }
@@ -1108,6 +1109,12 @@ h3 {
 
 .contact-points span {
   color: var(--muted);
+}
+
+.contact-points a {
+  color: inherit;
+  text-decoration-color: rgba(216, 185, 128, 0.4);
+  text-underline-offset: 2px;
 }
 
 .contact-form {
@@ -1199,9 +1206,9 @@ textarea {
 .footer-logo img {
   width: 54px;
   height: auto;
-  border-radius: 6px;
-  padding: 6px;
-  background: rgba(250, 250, 250, 0.96);
+  border-radius: 10px;
+  padding: 0;
+  background: transparent;
 }
 
 .footer-logo span {
@@ -1236,10 +1243,24 @@ textarea {
   align-content: start;
 }
 
+.footer-contact {
+  font-style: normal;
+}
+
+.footer-contact div {
+  display: grid;
+  gap: 6px;
+}
+
 .footer-contact a {
   color: var(--text);
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 900;
+  line-height: 1.45;
+}
+
+.footer-contact a[href^="tel:"] {
+  font-size: 1.25rem;
 }
 
 .footer-bottom {
@@ -2001,9 +2022,29 @@ h3,
 }
 
 .leader-card {
+  display: grid;
+  align-content: start;
   overflow: hidden;
   border-radius: 14px;
   background: #111113;
+}
+
+.leader-badge {
+  display: grid;
+  place-items: center;
+  width: 92px;
+  aspect-ratio: 1;
+  margin: 24px 24px 0;
+  border: 1px solid rgba(216, 185, 128, 0.3);
+  border-radius: 18px;
+  color: var(--gold);
+  background:
+    radial-gradient(circle at 50% 35%, rgba(216, 185, 128, 0.24), transparent 68%),
+    linear-gradient(180deg, rgba(24, 24, 27, 0.96), rgba(17, 17, 19, 0.96));
+  font-family: "Hanken Grotesk", Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
 }
 
 .leader-card img {
@@ -2539,6 +2580,7 @@ h3,
   .testimonial-grid,
   .premium-grid,
   .portfolio-grid,
+  .contact-points,
   .leadership-grid,
   .premium-features,
   .premium-timeline {
@@ -2585,6 +2627,10 @@ h3,
 
   .footer-bottom {
     flex-direction: column;
+  }
+
+  .footer-contact a {
+    font-size: 1rem;
   }
 }
 
