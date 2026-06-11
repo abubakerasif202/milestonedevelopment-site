@@ -5,7 +5,10 @@ Milestone Development provides premium residential, commercial, industrial, reno
 ## Core Pages
 
 - [Home](https://milestonedevelopment.com.au/): Construction services, project categories, process, team, and enquiry form.
-- [Meet the Team](https://milestonedevelopment.com.au/team.html): Mohammad Mohsini and Hussain Jafari.
+- [Residential](https://milestonedevelopment.com.au/residential-construction.html): Custom homes, townhouses, and residential builds.
+- [Commercial](https://milestonedevelopment.com.au/commercial-construction.html): Commercial construction, office, and fitout delivery.
+- [Industrial](https://milestonedevelopment.com.au/industrial-construction.html): Warehouse, logistics, and industrial facilities.
+- [Management Services](https://milestonedevelopment.com.au/management-services.html): Project planning, coordination, and builder-led delivery oversight.
 - [Contact](https://milestonedevelopment.com.au/contact.html): Project enquiry details and phone contact.
 
 ## Services

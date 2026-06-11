@@ -43,10 +43,10 @@ test('primary navigation matches client-facing information architecture', () => 
   assert.deepEqual(labels, [
     'Home',
     'About',
-    'Services',
-    'Projects',
-    'Process',
-    'Meet the Team',
+    'Residential',
+    'Commercial',
+    'Industrial',
+    'Management Services',
     'Contact',
   ]);
 });
