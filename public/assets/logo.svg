@@ -1,82 +1,22 @@
 <svg width="760" height="190" viewBox="0 0 760 190" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Milestone Development</title>
-  <desc id="desc">Transparent gold Milestone Development vector logo with geometric architectural M mark.</desc>
+  <desc id="desc">Gold Milestone Development logo with a geometric architectural M mark.</desc>
   <defs>
-    <linearGradient id="milestoneGold" x1="228" y1="15" x2="548" y2="178" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#FFF3A6" />
-      <stop offset="0.42" stop-color="#E8CF6C" />
-      <stop offset="1" stop-color="#B78C2D" />
+    <linearGradient id="gold" x1="18" y1="18" x2="720" y2="172" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F0CF74" />
+      <stop offset="0.52" stop-color="#D8AE53" />
+      <stop offset="1" stop-color="#BD8F38" />
     </linearGradient>
-    <linearGradient id="milestoneGoldSoft" x1="208" y1="126" x2="552" y2="186" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#F7E58F" />
-      <stop offset="0.55" stop-color="#E2C864" />
-      <stop offset="1" stop-color="#B99034" />
-    </linearGradient>
-    <filter id="goldGlow" x="130" y="-10" width="500" height="210" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feGaussianBlur stdDeviation="3.2" result="blur" />
-      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0.92  0 1 0 0 0.74  0 0 1 0 0.25  0 0 0 0.38 0" result="glow" />
-      <feMerge>
-        <feMergeNode in="glow" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
+    <filter id="softShadow" x="-8" y="-8" width="196" height="206" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#001E16" flood-opacity="0.32" />
     </filter>
-    <symbol id="milestoneMark" viewBox="0 0 280 132">
-      <path
-        d="M12 125V28L51 55V10L140 63L229 10V55L268 28V125H229V66L140 119L51 66V125H12Z"
-        stroke="#6F561E"
-        stroke-width="2.4"
-        stroke-linejoin="miter"
-      />
-      <path
-        d="M31 112V43L62 63V36L140 82L218 36V63L249 43V112H229V68L140 121L51 68V112H31Z"
-        stroke="url(#milestoneGold)"
-        stroke-width="13"
-        stroke-linejoin="miter"
-        stroke-linecap="square"
-      />
-      <path
-        d="M62 63L140 109L218 63M72 118L140 78L208 118"
-        stroke="#F0DB75"
-        stroke-width="9"
-        stroke-linejoin="miter"
-        stroke-linecap="square"
-      />
-      <path
-        d="M62 63L140 109L218 63M72 118L140 78L208 118"
-        stroke="#6F561E"
-        stroke-width="1.6"
-        stroke-linejoin="miter"
-        stroke-linecap="square"
-      />
-    </symbol>
   </defs>
-  <g filter="url(#goldGlow)">
-    <use href="#milestoneMark" x="275" y="0" width="210" height="99" />
-    <text
-      x="380"
-      y="158"
-      text-anchor="middle"
-      fill="url(#milestoneGoldSoft)"
-      stroke="#6F561E"
-      stroke-width="1.7"
-      paint-order="stroke fill"
-      font-family="Montserrat, 'Aptos Display', 'Segoe UI', Arial, sans-serif"
-      font-size="58"
-      font-weight="900"
-      letter-spacing="9"
-    >MILESTONE</text>
-    <text
-      x="380"
-      y="186"
-      text-anchor="middle"
-      fill="url(#milestoneGoldSoft)"
-      stroke="#6F561E"
-      stroke-width="1.15"
-      paint-order="stroke fill"
-      font-family="Montserrat, 'Aptos Display', 'Segoe UI', Arial, sans-serif"
-      font-size="30"
-      font-weight="800"
-      letter-spacing="9"
-    >DEVELOPMENT</text>
+  <g fill="url(#gold)">
+    <g filter="url(#softShadow)">
+      <path d="M10 168V40l32 22V10l54 40 54-40v52l32-22v128h-32V90l-54 40-54-40v78H10Zm16-16h6V56l-6-4v100Zm30 0h8V74l32 24 32-24v78h8V52L96 82 56 52v100Zm94 0h16V52l-16 10v90Z" />
+      <path d="m40 144 56-40 56 40v20l-56-40-56 40v-20Z" />
+    </g>
+    <text x="470" y="100" text-anchor="middle" font-family="Montserrat, 'Aptos Display', 'Segoe UI', Arial, sans-serif" font-size="60" font-weight="900" letter-spacing="8">MILESTONE</text>
+    <text x="470" y="145" text-anchor="middle" font-family="Montserrat, 'Aptos Display', 'Segoe UI', Arial, sans-serif" font-size="31" font-weight="800" letter-spacing="9">DEVELOPMENT</text>
   </g>
 </svg>

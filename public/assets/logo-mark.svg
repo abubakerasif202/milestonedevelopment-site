@@ -1,48 +1,18 @@
 <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Milestone Development logo mark</title>
-  <desc id="desc">Transparent gold geometric architectural M mark.</desc>
+  <desc id="desc">Gold geometric architectural M mark.</desc>
   <defs>
-    <linearGradient id="markGold" x1="15" y1="12" x2="82" y2="84" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#FFF3A6" />
-      <stop offset="0.44" stop-color="#E8CF6C" />
-      <stop offset="1" stop-color="#B78C2D" />
+    <linearGradient id="markGold" x1="20" y1="14" x2="78" y2="82" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F0CF74" />
+      <stop offset="0.52" stop-color="#D8AE53" />
+      <stop offset="1" stop-color="#BD8F38" />
     </linearGradient>
-    <filter id="markGlow" x="-8" y="-8" width="112" height="112" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feGaussianBlur stdDeviation="1.8" result="blur" />
-      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0.92  0 1 0 0 0.74  0 0 1 0 0.25  0 0 0 0.34 0" result="glow" />
-      <feMerge>
-        <feMergeNode in="glow" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
+    <filter id="markShadow" x="-6" y="-4" width="108" height="108" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#001E16" flood-opacity="0.28" />
     </filter>
   </defs>
-  <g filter="url(#markGlow)">
-    <path
-      d="M7 82V21L20 30V9L48 26L76 9V30L89 21V82H76V45L48 62L20 45V82H7Z"
-      stroke="#6F561E"
-      stroke-width="1.5"
-      stroke-linejoin="miter"
-    />
-    <path
-      d="M13 76V29L22 35V25L48 40L74 25V35L83 29V76H76V47L48 64L20 47V76H13Z"
-      stroke="url(#markGold)"
-      stroke-width="5.2"
-      stroke-linejoin="miter"
-      stroke-linecap="square"
-    />
-    <path
-      d="M22 35L48 61L74 35M26 78L48 55L70 78"
-      stroke="#F0DB75"
-      stroke-width="3.9"
-      stroke-linejoin="miter"
-      stroke-linecap="square"
-    />
-    <path
-      d="M22 35L48 61L74 35M26 78L48 55L70 78"
-      stroke="#6F561E"
-      stroke-width="0.85"
-      stroke-linejoin="miter"
-      stroke-linecap="square"
-    />
+  <g fill="url(#markGold)" filter="url(#markShadow)">
+    <path d="M5 84V20l16 11V5l27 20L75 5v26l16-11v64H75V45L48 65 21 45v39H5Zm8-8h3V28l-3-2v50Zm15 0h4V37l16 12 16-12v39h4V26l-20 15-20-15v50Zm47 0h8V26l-8 5v45Z" />
+    <path d="m20 72 28-20 28 20v10L48 62 20 82V72Z" />
   </g>
 </svg>

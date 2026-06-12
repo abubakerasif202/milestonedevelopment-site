@@ -1,36 +1,14 @@
 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" rx="12" fill="#053F2B" />
   <defs>
-    <linearGradient id="faviconGold" x1="9" y1="7" x2="55" y2="57" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#FFF3A6" />
-      <stop offset="0.45" stop-color="#E8CF6C" />
-      <stop offset="1" stop-color="#B78C2D" />
+    <linearGradient id="faviconGold" x1="14" y1="9" x2="52" y2="55" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F0CF74" />
+      <stop offset="0.52" stop-color="#D8AE53" />
+      <stop offset="1" stop-color="#BD8F38" />
     </linearGradient>
   </defs>
-  <path
-    d="M5 55V14L14 20V6L32 17L50 6V20L59 14V55H50V30L32 42L14 30V55H5Z"
-    stroke="#6F561E"
-    stroke-width="1.2"
-    stroke-linejoin="miter"
-  />
-  <path
-    d="M9 51V20L16 24V17L32 27L48 17V24L55 20V51H50V31L32 43L14 31V51H9Z"
-    stroke="url(#faviconGold)"
-    stroke-width="3.6"
-    stroke-linejoin="miter"
-    stroke-linecap="square"
-  />
-  <path
-    d="M16 24L32 40L48 24M18 52L32 36L46 52"
-    stroke="#F0DB75"
-    stroke-width="2.6"
-    stroke-linejoin="miter"
-    stroke-linecap="square"
-  />
-  <path
-    d="M16 24L32 40L48 24M18 52L32 36L46 52"
-    stroke="#6F561E"
-    stroke-width="0.65"
-    stroke-linejoin="miter"
-    stroke-linecap="square"
-  />
+  <g fill="url(#faviconGold)">
+    <path d="M5 56V13l11 7V4l16 12L48 4v16l11-7v43H48V31L32 44 16 31v25H5Zm6-6h2V19l-2-1v32Zm10 0h3V26l8 7 8-7v24h3V18L32 26 21 18v32Zm27 0h5V18l-5 2v30Z" />
+    <path d="m15 48 17-13 17 13v7L32 42 15 55v-7Z" />
+  </g>
 </svg>

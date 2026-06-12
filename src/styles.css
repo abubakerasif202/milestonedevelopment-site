@@ -181,8 +181,8 @@ footer {
 }
 
 .brand-link img {
-  width: 212px;
-  max-height: 52px;
+  width: 132px;
+  max-height: 68px;
   height: auto;
   object-fit: contain;
 }
@@ -1635,7 +1635,7 @@ textarea {
   }
 
   .brand-link img {
-    width: 166px;
+    width: 112px;
   }
 }
 
