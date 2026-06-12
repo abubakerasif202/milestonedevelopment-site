@@ -104,7 +104,13 @@ const setInitialMotionState = () => {
   if (prefersReducedMotion) {
     return;
   }
-  gsap.set(revealTargets.join(','), {
+
+  const targets = revealTargets.flatMap((selector) => gsap.utils.toArray(selector));
+  if (!targets.length) {
+    return;
+  }
+
+  gsap.set(targets, {
     opacity: 0,
     y: 28,
   });
@@ -115,10 +121,28 @@ const playHeroIntro = () => {
     return;
   }
 
-  gsap.timeline({ defaults: { ease: 'power3.out' } })
-    .from('.hero-copy > *', { opacity: 0, y: 28, duration: 0.82, stagger: 0.08, immediateRender: false }, 0.05)
-    .from('.hero-panel-card', { opacity: 0, y: 28, duration: 0.72, stagger: 0.08, immediateRender: false }, 0.18)
-    .from('.trust-bar > div', { opacity: 0, y: 24, duration: 0.72, stagger: 0.06, immediateRender: false }, 0.32);
+  const timeline = gsap.timeline({ defaults: { ease: 'power3.out' } });
+  timeline.from(
+    '.hero-copy > *',
+    { opacity: 0, y: 28, duration: 0.82, stagger: 0.08, immediateRender: false },
+    0.05,
+  );
+
+  if (document.querySelector('.hero-panel-card')) {
+    timeline.from(
+      '.hero-panel-card',
+      { opacity: 0, y: 28, duration: 0.72, stagger: 0.08, immediateRender: false },
+      0.18,
+    );
+  }
+
+  if (document.querySelector('.trust-bar > div')) {
+    timeline.from(
+      '.trust-bar > div',
+      { opacity: 0, y: 24, duration: 0.72, stagger: 0.06, immediateRender: false },
+      0.32,
+    );
+  }
 };
 
 const animatePreloader = () => {
@@ -170,7 +194,10 @@ const animatePreloader = () => {
 
 const animateRevealBlocks = () => {
   if (prefersReducedMotion) {
-    gsap.set(revealTargets.join(','), { opacity: 1, y: 0 });
+    const targets = revealTargets.flatMap((selector) => gsap.utils.toArray(selector));
+    if (targets.length) {
+      gsap.set(targets, { opacity: 1, y: 0 });
+    }
     return;
   }
 

@@ -11,10 +11,6 @@ const normalize = (value) =>
     .replace(/\s+/g, ' ')
     .trim();
 
-const textIncludes = (expected) => {
-  assert.match(normalize(html), new RegExp(expected.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i'));
-};
-
 const getPrimaryNavigation = () => {
   const match = html.match(/<nav class="site-nav"[\s\S]*?<\/nav>/);
   assert.ok(match, 'primary navigation exists');
@@ -22,115 +18,59 @@ const getPrimaryNavigation = () => {
 };
 
 test('homepage preserves required SEO metadata', () => {
-  assert.match(
-    html,
-    /<title>Milestone Development \| Residential &amp; Commercial Construction<\/title>/,
-  );
+  assert.match(html, /<title>Milestone Development \| Residential &amp; Commercial Construction<\/title>/);
   assert.match(
     html,
     /<meta\s+name="description"\s+content="Milestone Development provides residential, commercial, industrial and renovation construction services with experienced project management and trusted workmanship\."/,
   );
   assert.match(html, /<link rel="canonical" href="https:\/\/milestonedevelopment\.com\.au\/" \/>/);
-  assert.match(html, /<meta property="og:title" content="Milestone Development \| Residential &amp; Commercial Construction" \/>/);
   assert.match(html, /<meta name="twitter:card" content="summary_large_image" \/>/);
-  assert.match(html, /<script type="application\/ld\+json">/);
 });
 
-test('primary navigation matches client-facing information architecture', () => {
-  const nav = getPrimaryNavigation();
-  const labels = [...nav.matchAll(/<a\b[^>]*>(.*?)<\/a>/g)].map((match) => normalize(match[1]));
-
-  assert.deepEqual(labels, [
-    'Home',
-    'About',
-    'Services',
-    'Projects',
-    'Process',
-    'Meet the Team',
-    'Contact',
-  ]);
-});
-
-test('homepage contains the premium hero, trust, services and leadership content', () => {
-  textIncludes('Premium construction delivered with care.');
-  textIncludes(
-    'Milestone Development helps clients plan, build and manage residential, commercial, industrial, renovation and home-and-land package projects with clear communication and builder-led oversight.',
+test('primary navigation links to every dedicated content page', () => {
+  const labels = [...getPrimaryNavigation().matchAll(/<a\b[^>]*>(.*?)<\/a>/g)].map((match) =>
+    normalize(match[1]),
   );
-  textIncludes('View Projects');
-  textIncludes('Request Consultation');
 
-  for (const trustPoint of [
-    '10+ Years Experience',
-    'Certified Builder',
-    'Residential & Commercial',
-    'Project Management',
-  ]) {
-    textIncludes(trustPoint);
-  }
-
-  for (const service of [
-    'Residential Construction',
-    'Commercial Construction',
-    'Industrial Construction',
-    'Design & Construct',
-    'Renovations',
-    'Home & Land Packages',
-    'Management Services',
-  ]) {
-    textIncludes(service);
-  }
-
-  textIncludes('Mohammad Mohsini');
-  textIncludes('10 years construction experience');
-  textIncludes('Hussain Jafari');
-  textIncludes('Home & Land Package Specialist');
+  assert.deepEqual(labels, ['Home', 'About', 'Services', 'Projects', 'Process', 'Meet the Team', 'Contact']);
 });
 
-test('homepage contains the editorial project, gallery, process and contact sections', () => {
-  for (const project of [
-    'Sunset Ridge Residence',
-    'Luxury Homes',
-    'Dual Occupancy',
-    'Townhouses',
-    'Commercial Projects',
-    'Industrial Facilities',
-    'Luxury Renovations',
-    'Home & Land Packages',
+test('homepage contains only the focused home hero', () => {
+  assert.equal([...html.matchAll(/<section\b/g)].length, 1);
+  assert.match(html, /<section class="hero hero-premium"/);
+  assert.match(html, /Premium construction delivered with care\./);
+  assert.match(html, /href="\/services\.html">View Services<\/a>/);
+  assert.match(html, /href="\/contact\.html">Request Consultation<\/a>/);
+
+  for (const removedSection of [
+    'featured-section',
+    'stats-section',
+    'services-section',
+    'why-section',
+    'leadership-section',
+    'portfolio-section',
+    'gallery-section',
+    'process-section',
+    'contact-section',
+    'faq-section',
   ]) {
-    textIncludes(project);
+    assert.doesNotMatch(html, new RegExp(`class="[^"]*${removedSection}`));
   }
 
-  textIncludes('Cinematic Gallery');
-  textIncludes('Project visuals across the main construction services.');
-
-  for (const step of ['Consultation', 'Planning', 'Construction', 'Handover']) {
-    textIncludes(step);
-  }
-
-  textIncludes('Ready To Build With Confidence?');
-  textIncludes('Discuss your next project with Milestone Development.');
-  textIncludes('1800 008 883');
-  textIncludes('Request Consultation');
-  textIncludes('Call Now');
-  assert.match(html, /<form\b[^>]*data-contact-form/);
-  assert.match(html, /<details class="faq-item reveal">/);
+  assert.doesNotMatch(html, /data-contact-form/);
+  assert.doesNotMatch(html, /<details class="faq-item/);
 });
 
-test('LocalBusiness and FAQ JSON-LD remain valid and point to Milestone Development', () => {
-  const scriptMatches = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
-  assert.ok(scriptMatches.length >= 1, 'JSON-LD scripts exist');
+test('LocalBusiness JSON-LD remains valid without duplicating separate page content', () => {
+  const scriptMatch = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
+  assert.ok(scriptMatch, 'JSON-LD script exists');
 
-  const lastGraph = JSON.parse(scriptMatches[scriptMatches.length - 1][1]);
-  if (lastGraph['@graph']) {
-    const graph = lastGraph['@graph'];
-    const business = graph.find((entry) => entry['@id'] === 'https://milestonedevelopment.com.au/#business');
-    const faq = graph.find((entry) => entry['@type'] === 'FAQPage');
+  const graph = JSON.parse(scriptMatch[1])['@graph'];
+  const business = graph.find((entry) => entry['@id'] === 'https://milestonedevelopment.com.au/#business');
 
-    assert.equal(business.name, 'Milestone Development');
-    assert.equal(business.telephone, '1800 008 883');
-    assert.ok(business['@type'].includes('GeneralContractor'));
-    assert.ok(faq.mainEntity.length >= 4);
-  } else {
-    assert.fail('Expected JSON-LD graph');
-  }
+  assert.equal(business.name, 'Milestone Development');
+  assert.equal(business.telephone, '1800 008 883');
+  assert.ok(business['@type'].includes('GeneralContractor'));
+  assert.equal(graph.some((entry) => entry['@type'] === 'FAQPage'), false);
+  assert.equal(graph.some((entry) => entry['@type'] === 'Person'), false);
 });
