@@ -100,22 +100,6 @@ const revealTargets = [
   '.cta-inner',
 ];
 
-const setInitialMotionState = () => {
-  if (prefersReducedMotion) {
-    return;
-  }
-
-  const targets = revealTargets.flatMap((selector) => gsap.utils.toArray(selector));
-  if (!targets.length) {
-    return;
-  }
-
-  gsap.set(targets, {
-    opacity: 0,
-    y: 28,
-  });
-};
-
 const playHeroIntro = () => {
   if (prefersReducedMotion || !document.querySelector('.hero-copy')) {
     return;
@@ -194,10 +178,6 @@ const animatePreloader = () => {
 
 const animateRevealBlocks = () => {
   if (prefersReducedMotion) {
-    const targets = revealTargets.flatMap((selector) => gsap.utils.toArray(selector));
-    if (targets.length) {
-      gsap.set(targets, { opacity: 1, y: 0 });
-    }
     return;
   }
 
@@ -212,7 +192,10 @@ const animateRevealBlocks = () => {
       start: 'top 84%',
       once: true,
       onEnter: (batch) => {
-        gsap.to(batch, {
+        gsap.fromTo(batch, {
+          opacity: 0,
+          y: 24,
+        }, {
           opacity: 1,
           y: 0,
           duration: 0.82,
@@ -442,7 +425,6 @@ const setupContactForm = () => {
   });
 };
 
-setInitialMotionState();
 animatePreloader();
 animateRevealBlocks();
 animateCounters();
