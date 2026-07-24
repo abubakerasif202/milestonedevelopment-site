@@ -11,8 +11,6 @@ const nav = document.querySelector('[data-nav]');
 const navLinks = document.querySelectorAll('[data-nav] a');
 const contactForm = document.querySelector('[data-contact-form]');
 const formStatus = document.querySelector('[data-form-status]');
-const preloader = document.querySelector('[data-preloader]');
-const preloaderBar = document.querySelector('[data-preloader-bar]');
 const galleryShell = document.querySelector('[data-gallery]');
 const galleryTrack = document.querySelector('[data-gallery-track]');
 const compareSlider = document.querySelector('[data-compare-slider]');
@@ -127,53 +125,6 @@ const playHeroIntro = () => {
       0.32,
     );
   }
-};
-
-const animatePreloader = () => {
-  if (!preloader) {
-    playHeroIntro();
-    return;
-  }
-
-  const finish = () => {
-    if (preloader.dataset.done === 'true') {
-      return;
-    }
-
-    preloader.dataset.done = 'true';
-
-    if (prefersReducedMotion) {
-      preloader.remove();
-      playHeroIntro();
-      return;
-    }
-
-    gsap.to(preloader, {
-      opacity: 0,
-      duration: 0.45,
-      ease: 'power2.out',
-      onComplete: () => {
-        preloader.remove();
-        playHeroIntro();
-      },
-    });
-  };
-
-  if (preloaderBar) {
-    gsap.fromTo(
-      preloaderBar,
-      { scaleX: 0 },
-      {
-        scaleX: 1,
-        duration: prefersReducedMotion ? 0.1 : 1.15,
-        ease: 'power2.out',
-        transformOrigin: 'left center',
-      },
-    );
-  }
-
-  window.addEventListener('load', finish, { once: true });
-  window.setTimeout(finish, 1400);
 };
 
 const animateRevealBlocks = () => {
@@ -425,7 +376,7 @@ const setupContactForm = () => {
   });
 };
 
-animatePreloader();
+playHeroIntro();
 animateRevealBlocks();
 animateCounters();
 animateGallery();

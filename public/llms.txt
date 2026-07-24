@@ -1,23 +1,34 @@
 # Milestone Development
 
-Milestone Development provides premium residential, commercial, industrial, renovation, design and construct, management services, and home and land package support.
+Milestone Development is an Australian builder-led construction and property development company based in North Sydney, NSW. The team supports residential, commercial, industrial, renovation, design and construct, management services, and home and land package projects.
 
 ## Core Pages
 
 - [Home](https://milestonedevelopment.com.au/): Construction services, project categories, process, team, and enquiry form.
-- [Meet the Team](https://milestonedevelopment.com.au/team.html): Mohammad Mohsini and Hussain Jafari.
-- [Contact](https://milestonedevelopment.com.au/contact.html): Project enquiry details and phone contact.
+- [About](https://milestonedevelopment.com.au/about): Company approach, sectors, delivery model and contact details.
+- [Services](https://milestonedevelopment.com.au/services): Overview of seven core construction and management services.
+- [Projects](https://milestonedevelopment.com.au/projects): Clearly labelled concept imagery and supported project categories.
+- [Construction Process](https://milestonedevelopment.com.au/process): Consultation, planning, approvals, construction, quality control and handover.
+- [Meet the Team](https://milestonedevelopment.com.au/team): Mohammad Mohsini and Hussain Jafari.
+- [Contact](https://milestonedevelopment.com.au/contact): Project enquiry details and phone contact.
 
 ## Services
 
-- Residential construction
-- Commercial construction
-- Industrial construction
-- Renovations
-- Design and construct
-- Management services
-- Home and land packages
+- [Residential construction](https://milestonedevelopment.com.au/residential-construction)
+- [Commercial construction](https://milestonedevelopment.com.au/commercial-construction)
+- [Industrial construction](https://milestonedevelopment.com.au/industrial-construction)
+- [Renovations and extensions](https://milestonedevelopment.com.au/renovations)
+- [Design and construct](https://milestonedevelopment.com.au/design-and-construct)
+- [Management services](https://milestonedevelopment.com.au/management-services)
+- [Home and land packages](https://milestonedevelopment.com.au/home-and-land-packages)
+
+## Leadership
+
+- Mohammad Mohsini: Certified Builder with 10 years of construction experience.
+- Hussain Jafari: Home and Land Package Specialist.
 
 ## Contact
 
 Phone: 1800 008 883
+Email: admin@milestonedevelopment.com.au
+Address: Level 14, 275 Alfred St North, North Sydney NSW 2060
