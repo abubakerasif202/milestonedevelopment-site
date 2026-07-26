@@ -23,6 +23,8 @@ const expectedRoutes = [
   '/process',
   '/team',
   '/contact',
+  '/privacy',
+  '/terms',
 ];
 
 const getMetaContent = (html, selector) => {
@@ -101,6 +103,8 @@ test('Vercel config consolidates the www host and caches static assets', () => {
   );
   const assetHeaders = config.headers.find((entry) => entry.source === '/assets/(.*)');
 
+  const globalHeaders = config.headers.find((entry) => entry.source === '/(.*)');
+
   assert.equal(config.cleanUrls, true);
   assert.equal(hostRedirect?.destination, 'https://milestonedevelopment.com.au/:path*');
   assert.equal(hostRedirect?.permanent, true);
@@ -108,4 +112,13 @@ test('Vercel config consolidates the www host and caches static assets', () => {
     assetHeaders?.headers.find((header) => header.key === 'Cache-Control')?.value ?? '',
     /max-age=86400/,
   );
+  assert.match(
+    globalHeaders?.headers.find((header) => header.key === 'Strict-Transport-Security')?.value ?? '',
+    /max-age=63072000/,
+  );
+  assert.match(
+    globalHeaders?.headers.find((header) => header.key === 'Content-Security-Policy')?.value ?? '',
+    /default-src 'self'/,
+  );
 });
+

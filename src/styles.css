@@ -3004,3 +3004,25 @@ html {
     font-size: 0.95rem;
   }
 }
+
+.breadcrumb-nav {
+  font-size: 0.875rem;
+  color: var(--text-secondary, #A1A1AA);
+  margin-bottom: 1.25rem;
+}
+
+.breadcrumb-nav a {
+  color: var(--text-secondary, #A1A1AA);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb-nav a:hover {
+  color: var(--accent-gold, #D4AF37);
+}
+
+.breadcrumb-nav span {
+  color: var(--primary-text, #FAFAFA);
+  font-weight: 500;
+}
+

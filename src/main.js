@@ -369,10 +369,36 @@ const setupContactForm = () => {
     const projectType = new FormData(contactForm).get('project-type');
     contactForm.reset();
 
+    if (window.dataLayer) {
+      window.dataLayer.push({
+        event: 'enquiry_submitted',
+        projectType: projectType || 'General',
+      });
+    }
+    window.dispatchEvent(
+      new CustomEvent('milestone:enquiry_submitted', { detail: { projectType } }),
+    );
+
     if (formStatus) {
       const projectLabel = projectType ? ` for ${projectType}` : '';
       formStatus.textContent = `Thank you. Your enquiry details${projectLabel} are ready. Please call 1800 008 883 to speak with the team.`;
     }
+  });
+};
+
+const setupAnalyticsTracking = () => {
+  document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (window.dataLayer) window.dataLayer.push({ event: 'telephone_click', number: link.getAttribute('href') });
+      window.dispatchEvent(new CustomEvent('milestone:telephone_click'));
+    });
+  });
+
+  document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (window.dataLayer) window.dataLayer.push({ event: 'email_click', email: link.getAttribute('href') });
+      window.dispatchEvent(new CustomEvent('milestone:email_click'));
+    });
   });
 };
 
@@ -385,6 +411,7 @@ animateTimeline();
 setupBeforeAfter();
 setupMap();
 setupContactForm();
+setupAnalyticsTracking();
 
 window.addEventListener(
   'resize',
