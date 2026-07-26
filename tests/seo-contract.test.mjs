@@ -40,6 +40,11 @@ test('every page uses a unique clean canonical URL and valid metadata', () => {
     const title = html.match(/<title>([^<]+)<\/title>/i)?.[1] ?? '';
     const description = getMetaContent(html, 'description');
     const canonical = html.match(/<link rel="canonical" href="([^"]+)" \/>/i)?.[1] ?? '';
+    const ogTitle = getMetaContent(html, 'og:title');
+    const ogDesc = getMetaContent(html, 'og:description');
+    const ogUrl = getMetaContent(html, 'og:url');
+    const ogImage = getMetaContent(html, 'og:image');
+    const twitterCard = getMetaContent(html, 'twitter:card');
 
     assert.ok(title, `${file} has a title`);
     assert.ok(!titles.has(title), `${file} has a unique title`);
@@ -49,6 +54,17 @@ test('every page uses a unique clean canonical URL and valid metadata', () => {
     assert.ok(!canonicals.has(canonical), `${file} has a unique canonical`);
     assert.equal([...html.matchAll(/<h1\b/gi)].length, 1, `${file} has one H1`);
     assert.doesNotMatch(html, /href="\/[^"#?]+\.html(?:["#?])/);
+    assert.ok(ogTitle, `${file} has og:title`);
+    assert.ok(ogDesc, `${file} has og:description`);
+    assert.ok(ogUrl, `${file} has og:url`);
+    assert.ok(ogImage, `${file} has og:image`);
+    assert.ok(twitterCard, `${file} has twitter:card`);
+    assert.ok(html.includes('href="/privacy"'), `${file} has privacy link in footer`);
+    assert.ok(html.includes('href="/terms"'), `${file} has terms link in footer`);
+
+    for (const imgMatch of html.matchAll(/<img\b([^>]*)>/gi)) {
+      assert.match(imgMatch[1], /\balt="/i, `${file} img has alt attribute`);
+    }
 
     for (const match of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
       const schema = JSON.parse(match[1]);
