@@ -1269,6 +1269,79 @@ textarea {
   font-size: 0.92rem;
 }
 
+.developer-credit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  min-width: 0;
+  color: rgba(250, 250, 250, 0.62);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.developer-credit-label {
+  white-space: nowrap;
+}
+
+.developer-credit a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 220ms ease, opacity 220ms ease;
+}
+
+.developer-credit img {
+  display: block;
+  width: clamp(124px, 10vw, 150px);
+  height: auto;
+  aspect-ratio: 664 / 294;
+  opacity: 0.76;
+  transition: opacity 220ms ease, filter 220ms ease;
+}
+
+.developer-credit-arrow {
+  font-size: 1rem;
+  line-height: 1;
+  transition: transform 220ms ease;
+}
+
+.developer-credit a:hover,
+.developer-credit a:focus-visible {
+  color: var(--gold);
+}
+
+.developer-credit a:hover img,
+.developer-credit a:focus-visible img {
+  opacity: 1;
+  filter: drop-shadow(0 0 10px rgba(216, 185, 128, 0.18));
+}
+
+.developer-credit a:hover .developer-credit-arrow,
+.developer-credit a:focus-visible .developer-credit-arrow {
+  transform: translate(1px, -1px);
+}
+
+.developer-credit a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 5px;
+  border-radius: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .developer-credit a,
+  .developer-credit img,
+  .developer-credit-arrow {
+    transition: none;
+  }
+}
+
 .page-hero {
   position: relative;
   overflow: hidden;
@@ -2473,6 +2546,10 @@ h3,
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.developer-credit {
+  flex-shrink: 0;
+}
+
 @media (max-width: 1100px) {
   .hero-layout,
   .featured-project,
@@ -3003,6 +3080,23 @@ html {
   .footer-contact a {
     font-size: 0.95rem;
   }
+
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .developer-credit {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+    text-align: left;
+  }
+
+  .developer-credit img {
+    width: clamp(128px, 42vw, 160px);
+  }
 }
 
 .breadcrumb-nav {
@@ -3025,4 +3119,3 @@ html {
   color: var(--primary-text, #FAFAFA);
   font-weight: 500;
 }
-

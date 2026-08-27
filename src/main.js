@@ -21,6 +21,26 @@ const mapTitle = document.querySelector('[data-map-title]');
 const mapBody = document.querySelector('[data-map-body]');
 const counters = document.querySelectorAll('[data-counter]');
 
+const setupDeveloperCredit = () => {
+  const footerBottom = document.querySelector('.footer-bottom');
+
+  if (!footerBottom || footerBottom.querySelector('[data-developer-credit]')) {
+    return;
+  }
+
+  const credit = document.createElement('div');
+  credit.className = 'developer-credit';
+  credit.dataset.developerCredit = '';
+  credit.innerHTML = `
+    <span class="developer-credit-label">Designed &amp; Developed by</span>
+    <a href="https://www.abwebstudio.com.au/" target="_blank" rel="noopener noreferrer" aria-label="Visit AB Digital Solutions">
+      <img src="/branding/ab-digital-solutions-watermark.webp" width="150" height="66" alt="AB Digital Solutions" />
+      <span class="developer-credit-arrow" aria-hidden="true">↗</span>
+    </a>
+  `;
+  footerBottom.append(credit);
+};
+
 const mapData = {
   nsw: {
     title: 'Sydney, NSW',
@@ -412,6 +432,7 @@ setupBeforeAfter();
 setupMap();
 setupContactForm();
 setupAnalyticsTracking();
+setupDeveloperCredit();
 
 window.addEventListener(
   'resize',
