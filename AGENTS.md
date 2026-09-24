@@ -160,7 +160,7 @@ Services:
 Team:
 
 * **Mohammad Mohsini** — Certified Builder, 10 years construction experience
-* **Hussain Jafari** — Home & Land Package Specialist
+* **Francis An** — Home & Land Package Specialist
 
 ## Copy Voice
 
